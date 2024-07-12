@@ -1,0 +1,287 @@
+.earth-size{
+  height: 100px;
+  width: 100px;
+}
+.earth {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px rgb(141, 92, 0) inset, 0 0 20px 2px rgb(92, 60, 0);
+}
+
+.earth:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #392200 inset;
+  border-radius: 50%;
+}
+
+.earth>div {
+  width: 800%;
+  height: 100%;
+  background: url(../images/svgs/world4.svg);
+  background-size: cover;
+  animation: spin 3.3s linear forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-86.45%);
+    /* Second image translated by 200% */
+  }
+}
+
+.zoom-effect {
+  animation: zoomIn 0.3s linear 0.3s forwards;
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform-origin: center center;
+}
+
+@keyframes zoomIn {
+  to {
+    transform: scale(10);
+  }
+}
+
+.map-grad {
+  position: relative;
+  display: inline-block;
+}
+
+.map-grad img {
+  display: block;
+}
+
+.map-grad::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.373);
+  pointer-events: none;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#world-ind svg path:hover{
+  fill: orange;
+}
+
+.BornHS__Wrapper {
+  position: relative;
+
+  .BornHS__Close {
+    display: none;
+  }
+  .Content__Wrapper {
+    position: relative;
+  }
+
+  .BornHS__Modal__Content {
+    background: #131313;
+    border-radius: 5px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.22);
+    color: #fff;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    width: 360px;
+    z-index: 4;
+    .Content__Wrapper {
+      padding: 20px;
+      .BornHS__Title {
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .BornHS__Input {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    width: 0;
+    z-index: -1;
+    + .BornHS__Label {
+      background: #ec2256;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 20px;
+      position: absolute;
+      transition: all 300ms ease;
+      width: 20px;
+      z-index: 2;
+      @media (min-width: 768px) {
+        height: 20px;
+        width: 20px;
+      }
+      &:before,
+      &:after {
+        background: #fff;
+        content: "";
+        cursor: pointer;
+        display: block;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:before {
+        height: 2px;
+        width: 40%;
+      }
+      &:after {
+        height: 40%;
+        width: 2px;
+      }
+    }
+    ~ .BornHS__Overlay {
+      display: none;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      z-index: 3;
+    }
+    &:checked {
+      + .BornHS__Label {
+        transform: rotate(45deg);
+      }
+      ~ .BornHS__Modal__Content {
+        opacity: 1;
+        visibility: visible;
+      }
+      ~ .BornHS__Overlay {
+        display: block;
+      }
+    }
+  }
+  &.BornHS__Blur {
+    figure {
+      -webkit-filter: blur(2px);
+      -moz-filter: blur(2px);
+      -o-filter: blur(2px);
+      -ms-filter: blur(2px);
+      filter: blur(2px);
+    }
+    .BornHS__Input {
+      display: none;
+      + .BornHS__Label {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      &:checked {
+        display: inline-block;
+        + .BornHS__Label {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+}
+
+.BornHS__Modal {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .BornHS__Wrapper {
+    .BornHS__Modal__Content {
+      bottom: auto !important;
+      left: 50% !important;
+      top: 50% !important;
+      transform: translate(-50%, -50%) !important;
+
+      .BornHS__Close {
+        background: #ec2256;
+        border-radius: 50%;
+        cursor: pointer;
+        display: block;
+        height: 20px;
+        right: -5px;
+        position: absolute;
+        top: -5px;
+        transition: all 300ms ease;
+        transform: rotate(45deg);
+        width: 20px;
+        z-index: 5;
+
+        &:before,
+        &:after {
+          background: #fff;
+          content: "";
+          cursor: pointer;
+          display: block;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:before {
+          height: 2px;
+          width: 40%;
+        }
+        &:after {
+          height: 40%;
+          width: 2px;
+        }
+      }
+    }
+  }
+}
