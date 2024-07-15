@@ -596,10 +596,6 @@ video {
   z-index: 10;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -616,6 +612,11 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(2.5rem * var(--tw-space-x-reverse));
   margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.bg-orange-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
 }
 
 .bg-white {

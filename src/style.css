@@ -103,11 +103,11 @@
   fill: orange;
 }
 #world-ind{
-z-index: -10;
+z-index: -100000;
 
 }
 svg{
-  z-index: -10;
+  z-index: -100000;
 }
 .BornHS__Wrapper {
   position: relative;
@@ -129,7 +129,7 @@ svg{
     transition: all 0.3s ease-in-out;
     visibility: hidden;
     width: 360px;
-    z-index: 4444;
+    z-index: 100000;
     .Content__Wrapper {
       padding: 20px;
       .BornHS__Title {
@@ -156,7 +156,7 @@ svg{
     position: absolute;
     text-indent: -9999px;
     width: 0;
-    z-index: -1;
+    z-index: -100000;
     + .BornHS__Label {
       background: #ec2256;
       border-radius: 50%;
@@ -165,7 +165,7 @@ svg{
       position: absolute;
       transition: all 300ms ease;
       width: 15px;
-      z-index: 2;
+      z-index: 100000;
       @media (min-width: 768px) {
         height: 15px;
         width: 15px;
@@ -198,7 +198,7 @@ svg{
       position: absolute;
       width: 100%;
       top: 0;
-      z-index: 3;
+      z-index: 100000;
     }
     &:checked {
       + .BornHS__Label {
@@ -246,7 +246,7 @@ svg{
   top: 0;
   right: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100000;
 }
 
 @media (max-width: 768px) {
@@ -269,7 +269,7 @@ svg{
         transition: all 300ms ease;
         transform: rotate(45deg);
         width: 20px;
-        z-index: 5;
+        z-index: 1000000;
 
         &:before,
         &:after {

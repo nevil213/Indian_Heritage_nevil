@@ -1,10 +1,212 @@
-.BornHS__Wrapper {
+.earth-container {
+  height: 98vh; /* Set the fixed height */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #000; /* Optional: for visual reference */
+}
+
+.nav{
+  }
+
+.nav li{
+  padding: 10px;
+  width: max-content;
+}
+.nav .logo{
+  padding: 10px;
+  width: max-content;
+}
+
+.nav li:hover{
+  background-color: orangered;
+}
+
+.nav li {
+  padding: 10px;
+  width: max-content;
+  position: relative; /* Add this line */
+}
+.nav .logo {
+  padding: 10px;
+  width: max-content;
+}
+
+.nav li:hover {
+  background-color: orangered;
+}
+
+.li-1:hover::after {
+  content: '';
+  background: brown;
+  border-radius: 100px;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.li-2:hover::after {
+  content: '';
+  background: brown;
+  border-radius: 100px;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.li-3:hover::after {
+  content: '';
+  background: brown;
+  border-radius: 100px;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.li-4:hover::after {
+  content: '';
+  background: brown;
+  border-radius: 100px;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.li-5:hover::after {
+  content: '';
+  background: brown;
+  border-radius: 100px;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+  .earth {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px rgb(141, 92, 0) inset, 0 0 20px 2px rgb(92, 60, 0);
+  }
+  
+  .earth:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px #392200 inset;
+    border-radius: 50%;
+  }
+  
+  .earth>div {
+    width: 800%;
+    height: 100%;
+    background: url(../images/svgs/world4.svg);
+    background-size: cover;
+    animation: spin 2.6s linear forwards;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(-86.45%);
+      /* Second image translated by 200% */
+    }
+  }
+  
+  .zoom-effect {
+    animation: zoomIn 2.3s linear 0.3s forwards;
+    position: absolute;
+    content: "";
+    top: 270px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-origin: center center;
+  }
+  
+  
+  @keyframes zoomIn {
+    10% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.5);
+    }
+    40% {
+      transform: scale(2);
+    }
+    60% {
+      transform: scale(5);
+    }
+    80% {
+      transform: scale(8);
+    }
+    90% {
+      transform: scale(9);
+    }
+    100% {
+      transform: scale(10);
+    }
+  }
+  
+  .one {
+    max-width: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .one.show1 {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .two {
+    max-width: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .two.show2 {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  #world-ind svg path:hover{
+    fill: orange;
+  }
+  #world-ind{
+  z-index: -100000;
+  
+  }
+  #world-ind svg{
+    z-index: -100000;
+    width: 98vw;
+    @media (max-width: 1000px) {
+      width: 98vw;
+      height: 32vh;
+    }
+  }
+  .BornHS__Wrapper {
     position: relative;
   
     .BornHS__Close {
       display: none;
     }
-  
     .Content__Wrapper {
       position: relative;
     }
@@ -20,26 +222,18 @@
       visibility: hidden;
       width: 360px;
       z-index: 4;
-  
       .Content__Wrapper {
         padding: 20px;
-  
         .BornHS__Title {
           font-size: 16px;
           text-transform: uppercase;
         }
-  
         p {
           font-size: 13px;
           margin: 0;
           padding: 0;
         }
       }
-    }
-  
-    .BornHS__Input__Container {
-      display: inline-block;
-      margin: 0 10px;
     }
   
     .BornHS__Input {
@@ -50,22 +244,19 @@
       text-indent: -9999px;
       width: 0;
       z-index: -1;
-  
       + .BornHS__Label {
         background: #ec2256;
         border-radius: 50%;
         cursor: pointer;
-        height: 20px;
+        height: 15px;
         position: absolute;
         transition: all 300ms ease;
-        width: 20px;
+        width: 15px;
         z-index: 2;
-
         @media (min-width: 768px) {
-          height: 20px;
-          width: 20px;
+          height: 15px;
+          width: 15px;
         }
-  
         &:before,
         &:after {
           background: #fff;
@@ -82,13 +273,11 @@
           height: 2px;
           width: 40%;
         }
-  
         &:after {
           height: 40%;
           width: 2px;
         }
       }
-  
       ~ .BornHS__Overlay {
         display: none;
         height: 100%;
@@ -98,23 +287,19 @@
         top: 0;
         z-index: 3;
       }
-  
       &:checked {
         + .BornHS__Label {
           transform: rotate(45deg);
         }
-  
-        ~ .BornHS__Modal__Content[data-target=".BornHS__Input:checked"] {
+        ~ .BornHS__Modal__Content {
           opacity: 1;
           visibility: visible;
         }
-  
         ~ .BornHS__Overlay {
           display: block;
         }
       }
     }
-  
     &.BornHS__Blur {
       figure {
         -webkit-filter: blur(2px);
@@ -123,14 +308,12 @@
         -ms-filter: blur(2px);
         filter: blur(2px);
       }
-  
       .BornHS__Input {
         display: none;
         + .BornHS__Label {
           opacity: 0.5;
           pointer-events: none;
         }
-  
         &:checked {
           display: inline-block;
           + .BornHS__Label {
@@ -142,16 +325,6 @@
     }
   }
   
-  .BornHS__Modal {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1;
-  }
   
   @media (max-width: 768px) {
     .BornHS__Wrapper {
@@ -191,7 +364,6 @@
             height: 2px;
             width: 40%;
           }
-  
           &:after {
             height: 40%;
             width: 2px;
@@ -200,5 +372,4 @@
       }
     }
   }
-  
   
