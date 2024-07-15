@@ -1,21 +1,19 @@
-function showHideDivs() {
-    const divOne = document.querySelector('.one');
-    const divTwo = document.querySelector('.two');
-  
-    if (divOne && divTwo) {
-      divOne.style.display = 'none'; // Hide div with class "one"
-      divTwo.style.display = 'block'; // Unhide div with class "two"
-    } else {
-      console.error('Divs with classes "one" and "two" not found.'); // Handle potential errors
-    }
-  }
-  
-  setTimeout(showHideDivs, 300);
+window.onload = function() {
+  setTimeout(function() {
+    document.querySelector('.one').classList.add('show1');
+  }, 1900);
+  setTimeout(function() {
+    document.querySelector('.two').classList.add('show2');
+  }, 1900);
+};
+
 
   $('.BornHS__Input').change(function(){
     if($(this).is(":checked")) {
         $('.BornHS__Wrapper').addClass("BornHS__Blur");
+        $(this).closest('.BornHS__Wrapper').removeClass("BornHS__Blur");
     } else {
         $('.BornHS__Wrapper').removeClass("BornHS__Blur");
     }
 });
+

@@ -1,7 +1,7 @@
-.earth-size{
-  height: 100px;
-  width: 100px;
+.nav{
+  padding:20px;
 }
+
 .earth {
   width: 300px;
   height: 300px;
@@ -32,7 +32,7 @@
   height: 100%;
   background: url(../images/svgs/world4.svg);
   background-size: cover;
-  animation: spin 3.3s linear forwards;
+  animation: spin 2.6s linear forwards;
 }
 
 @keyframes spin {
@@ -47,63 +47,68 @@
 }
 
 .zoom-effect {
-  animation: zoomIn 0.3s linear 0.3s forwards;
+  animation: zoomIn 2.3s linear 0.3s forwards;
   position: absolute;
   content: "";
-  top: 0;
+  top: 270px;
   bottom: 0;
   left: 0;
   right: 0;
   transform-origin: center center;
 }
 
+
 @keyframes zoomIn {
-  to {
+  10% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  40% {
+    transform: scale(2);
+  }
+  60% {
+    transform: scale(5);
+  }
+  80% {
+    transform: scale(8);
+  }
+  90% {
+    transform: scale(9);
+  }
+  100% {
     transform: scale(10);
   }
 }
 
-.map-grad {
-  position: relative;
-  display: inline-block;
-}
-
-.map-grad img {
+.one {
+  opacity: 1;
   display: block;
+  transition: opacity 0.5s ease-in-out;
+}
+.one.show1 {
+  opacity: 0;
+}
+.two {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.map-grad::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.373);
-  pointer-events: none;
-}
-
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-
-.image-container img {
-  display: block;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.two.show2 {
+  opacity: 1;
 }
 
 #world-ind svg path:hover{
   fill: orange;
 }
+#world-ind{
+z-index: -100000;
 
+}
+svg{
+  z-index: -100000;
+}
 .BornHS__Wrapper {
   position: relative;
 
@@ -124,17 +129,22 @@
     transition: all 0.3s ease-in-out;
     visibility: hidden;
     width: 360px;
-    z-index: 4;
+    z-index: 100000;
     .Content__Wrapper {
       padding: 20px;
       .BornHS__Title {
         font-size: 16px;
         text-transform: uppercase;
+        padding-bottom: 3%;
       }
       p {
         font-size: 13px;
         margin: 0;
-        padding: 0;
+        padding: 3% 0%;
+      }
+      img{
+        max-height: 290px;
+        max-width: 320px;
       }
     }
   }
@@ -146,7 +156,7 @@
     position: absolute;
     text-indent: -9999px;
     width: 0;
-    z-index: -1;
+    z-index: -100000;
     + .BornHS__Label {
       background: #ec2256;
       border-radius: 50%;
@@ -154,11 +164,11 @@
       height: 20px;
       position: absolute;
       transition: all 300ms ease;
-      width: 20px;
-      z-index: 2;
+      width: 15px;
+      z-index: 100000;
       @media (min-width: 768px) {
-        height: 20px;
-        width: 20px;
+        height: 15px;
+        width: 15px;
       }
       &:before,
       &:after {
@@ -188,7 +198,7 @@
       position: absolute;
       width: 100%;
       top: 0;
-      z-index: 3;
+      z-index: 100000;
     }
     &:checked {
       + .BornHS__Label {
@@ -236,7 +246,7 @@
   top: 0;
   right: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100000;
 }
 
 @media (max-width: 768px) {
@@ -259,7 +269,7 @@
         transition: all 300ms ease;
         transform: rotate(45deg);
         width: 20px;
-        z-index: 5;
+        z-index: 1000000;
 
         &:before,
         &:after {
