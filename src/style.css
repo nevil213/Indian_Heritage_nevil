@@ -5,16 +5,9 @@
   border: 1px solid #000; /* Optional: for visual reference */
 }
 
-.nav{
-  }
-
-.nav li{
-  padding: 10px;
-  width: max-content;
-}
-.nav .logo{
-  padding: 10px;
-  width: max-content;
+.logo img{
+  padding: 6px;
+  width: 6%;
 }
 
 .nav li:hover{
@@ -25,10 +18,6 @@
   padding: 10px;
   width: max-content;
   position: relative; /* Add this line */
-}
-.nav .logo {
-  padding: 10px;
-  width: max-content;
 }
 
 .nav li:hover {
