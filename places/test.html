@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../src/output.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="script2.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+
+	<div class="earth-container">
+		<!-- <nav class="flex justify-between z-10 bg-orange-400 relative nav">
+         <div class="logo"><img src="../images/logo.png" alt="Logo"></div>
+         <ul class="flex space-x-10 ">
+            <li class="li-1">Places</li>
+            <li class="li-2">Festivals & Fair</li>
+            <li class="li-3">Cultural Hetitage</li>
+            <li class="li-4">Literary Hetitage</li>
+            <li class="li-5">People, Music & Dance</li>
+         </ul>
+      </nav> -->
+	  <header>
+        <nav class="z-1000 relative">
+            <ul class="sidebar" >
+               <li onclick=hideSidebar() class="close"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                        viewBox="0 96 960 960" width="26" fill="#f1f0ec">
+                        <path
+                           d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                     </svg></a></li>
+               <li><a href="#">Places</a></li>
+               <li><a href="#">Festivals & Fair</a></li>
+               <li><a href="#">Cultural Hetitage</a></li>
+               <li><a href="#">Literary Hetitage</a></li>
+               <li><a href="#">People, Music & Dance</a></li>
+            </ul>
+            <ul>
+               <li class="logo"><img src="../images/logo.png" style="width: 40px; padding: 5px;"></li>
+               <li class="hideOnMobile"><a href="#">Places</a></li>
+               <li class="hideOnMobile"><a href="#">Festivals & Fair</a></li>
+               <li class="hideOnMobile"><a href="#">Cultural Hetitage</a></li>
+               <li class="hideOnMobile"><a href="#">Literary Hetitage</a></li>
+               <li class="hideOnMobile"><a href="#">People, Music & Dance</a></li>
+               <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26" viewBox="0 96 960 960" fill="#f1f0ec" width="26">
+                        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                     </svg></a></li>
+            </ul>
+         </nav>
+    </header>
+
+	
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="../images/gujarat/rkv/rkv.jpg">
+                <div class="content">
+                    <div class="author">Place</div>
+                    <div class="title">Rani Ki Vav</div>
+                    <div class="topic">Gujarat</div>
+                    <div class="des">
+                        Rani ki Vav, the "Queen's Stepwell", is an intricate stepwell located in Patan, Gujarat, India.
+                        Built in the 11th century AD, it serves as a remarkable example of Indian craftsmanship and
+                        engineering. This UNESCO World Heritage Site is a subterranean structure with seven storeys. The
+                        walls are adorned with sculptures and decorative panels, showcasing the Maru-Gurjara
+                        architectural style. Originally built as a memorial to a king, the stepwell not only provided
+                        water for the community but also functioned as a cool retreat during summers. Today, it stands
+                        as a testament to the bygone era's water management systems and architectural prowess.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/gujarat/ahmd/ahmd.jpg">
+                <div class="content">
+                    <div class="author">Place</div>
+                    <div class="title">Ahmedabad</div>
+                    <div class="topic">Gujarat</div>
+                    <div class="des">
+                        Founded in 1411, Ahmedabad boasts a unique blend of Hindu, Jain, and Islamic architecture.
+                        Mosques, temples, stepwells, forts - all showcasing intricate craftsmanship - reflect its
+                        multicultural past. The old city's Pols, tightly knit residential clusters, offer a glimpse into
+                        the traditional way of life. Remnants of fortified walls and gates like Teen Darwaza speak of
+                        its historic defenses. Ahmedabad is a vibrant testament to its rich heritage.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/gujarat/Dhol/dholavira.jpg">
+                <div class="content">
+                    <div class="author">Place</div>
+                    <div class="title">Dholavira</div>
+                    <div class="topic">Gujarat</div>
+                    <div class="des">
+                        Dholavira, a UNESCO World Heritage Site, is an exceptionally well-preserved urban settlement from the Indus Valley Civilization (3rd to mid-2nd millennium BCE).  One of the five largest Harappan sites, Dholavira thrived for over 1,500 years.  Its ruins showcase outstanding urban planning, water management systems, and architectural feats.  Exquisitely crafted houses, a massive fort, and an ingenious rainwater harvesting system offer a glimpse into the advanced society that flourished there.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/gujarat/Pavagadh/pavagargh.jpg">
+                <div class="content">
+                    <div class="author">Place</div>
+                    <div class="title">Pavagadh</div>
+                    <div class="topic">Gujarat</div>
+                    <div class="des">
+                        Pavagadh, a towering hill in Gujarat, India, is a heritage site marked by Jain & Hindu temples. Evidence suggests it was a holy place as early as 140 CE. The 8th-14th century Jain temples & the famous Kalika Mata Temple atop the hill speak to its religious significance. Fortified by the Khichi Chauhan Rajputs in the 13th century, its reign is marked by water systems & architectural marvels. Pavagadh stands as a testament to the region's rich tapestry of religious influences & historical significance.
+                     </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="../images/gujarat/rkv/rkv.jpg">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/gujarat/ahmd/ahmd.jpg">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/gujarat/Dhol/dholavira.jpg">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/gujarat/Pavagadh/pavagargh.jpg">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev">&#60;</button>
+            <button id="next">&#62;</button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+    <script src="app.js"></script>
+
+	<script>
+		function showSidebar() {
+			const sidebar = document.querySelector('.sidebar')
+			sidebar.style.display = 'flex'
+			const menu = document.querySelector('.menu-button')
+			menu.style.display = 'none'
+		}
+		function hideSidebar() {
+			const sidebar = document.querySelector('.sidebar')
+			sidebar.style.display = 'none'
+			const menu = document.querySelector('.menu-button')
+			menu.style.display = 'block'
+		}
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6vP0kho8N6+8nxcjKTH5D2Rt+kqRvK+X5/0z9I9UJszJjE3qo+FdT9swuZS3zA7" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #D2D2D2;
+            background-image:
+                repeating-linear-gradient(to right, transparent 0 100px,
+                    #25283b22 100px 101px),
+                repeating-linear-gradient(to bottom, transparent 0 100px,
+                    #25283b22 100px 101px);
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="z-1000 relative">
+            <ul class="sidebar z-1000">
+                <li onclick=hideSidebar() class="close"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                            viewBox="0 96 960 960" width="26" fill="#f1f0ec">
+                            <path
+                                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                        </svg></a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="#">Festivals & Fair</a></li>
+                <li><a href="#">Festivals & Fair</a></li>
+                <li><a href="#">Cultural Hetitage</a></li>
+                <li><a href="#">Literary Hetitage</a></li>
+                <li><a href="#">People, Music & Dance</a></li>
+                <li><a href="#">People, Music & Dance</a></li>
+            </ul>
+            <ul>
+                <li class="logo"><img src="../images/logo.png" style="width: 50px; padding: 5px;"></li>
+                <li class="hideOnMobile"><a href="#">Places</a></li>
+                <li class="hideOnMobile"><a href="#">Festivals</a></li>
+                <li class="hideOnMobile"><a href="#">Fair</a></li>
+                <li class="hideOnMobile"><a href="#">Cultural Hetitage</a></li>
+                <li class="hideOnMobile"><a href="#">Literary Hetitage</a></li>
+                <li class="hideOnMobile"><a href="#">People</a></li>
+                <li class="hideOnMobile"><a href="#">Music & Dance</a></li>
+                <li class="hideOnMobile"><a href="#">Rivers</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="26" viewBox="0 96 960 960" fill="#f1f0ec" width="26">
+                            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+
+        <div class="slider" style="--quantity: 8" id="animatedElement">
+            <div class="item" style="--position: 1"><img src="../images/home/places.jpg" alt="" onclick="location.href='../places/index.html'">
+                <div class="heritage">
+                    Places
+                </div>
+            </div>
+            <div class="item" style="--position: 2"><img src="../images/home/festivals.png" alt="">
+                <div class="heritage">
+                    Festivals
+                </div>
+            </div>
+            <div class="item" style="--position: 3"><img src="../images/home/fair.jpg" alt="">
+                <div class="heritage">
+                    Fair
+                </div>
+            </div>
+            <div class="item" style="--position: 4"><img src="../images/home/dance.jpg" alt="">
+                <div class="heritage">
+                    Music & Dance
+                </div>
+            </div>
+            <div class="item" style="--position: 5"><img src="../images/home/culture.jpg" alt="">
+                <div class="heritage">
+                    Culture
+                </div>
+            </div>
+            <div class="item" style="--position: 6"><img src="../images/home/literature.jpg" alt="">
+                <div class="heritage">
+                    Literature
+                </div>
+            </div>
+            <div class="item" style="--position: 7"><img src="../images/home/people.jpg" alt="">
+                <div class="heritage">
+                    People
+                </div>
+            </div>
+            <div class="item" style="--position: 8"><img src="../images/home/rivers.jpg" alt="">
+                <div class="heritage">
+                    Rivers
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="app">
+                <div class="pause active">
+                    <div class="line line_1"></div>
+                    <div class="line line_2"></div>
+                </div>
+                <div class="play ">
+                    <div class="line line_1"></div>
+                    <div class="line line_2"></div>
+                    <div class="line line_3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+            const menu = document.querySelector('.menu-button')
+            menu.style.display = 'none'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+            const menu = document.querySelector('.menu-button')
+            menu.style.display = 'block'
+        }
+
+        
+        var pause = document.querySelector('.pause');
+        var play = document.querySelector('.play');
+        var btn = document.querySelector('#app');
+
+        btn.addEventListener('click', () => {
+            if (play.classList.contains("active")) {
+                play.classList.remove("active");
+                pause.classList.add("active");
+            } else {
+                pause.classList.remove("active");
+                play.classList.add("active");
+            }
+        });
+
+        var container = document.querySelector('.container');
+        var slider = document.querySelector('.slider');
+
+        container.addEventListener('click', function () {
+            slider.classList.toggle('paused');
+        });
+    </script>
+
+</body>
+
+</html>

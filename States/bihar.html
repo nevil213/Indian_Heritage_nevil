@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+
+<body>
+    <header>
+        <nav class="z-1000 relative">
+            <ul class="sidebar z-1000">
+                <li onclick=hideSidebar() class="close"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                            viewBox="0 96 960 960" width="26" fill="#f1f0ec">
+                            <path
+                                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                        </svg></a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="#">Festivals & Fair</a></li>
+                <li><a href="#">Festivals & Fair</a></li>
+                <li><a href="#">Cultural Hetitage</a></li>
+                <li><a href="#">Literary Hetitage</a></li>
+                <li><a href="#">People, Music & Dance</a></li>
+                <li><a href="#">People, Music & Dance</a></li>
+            </ul>
+            <ul>
+                <li class="logo"><img src="../images/logo.png" style="width: 50px; padding: 5px;"></li>
+                <li class="hideOnMobile"><a href="#">Places</a></li>
+                <li class="hideOnMobile"><a href="#">Festivals</a></li>
+                <li class="hideOnMobile"><a href="#">Fair</a></li>
+                <li class="hideOnMobile"><a href="#">Cultural Hetitage</a></li>
+                <li class="hideOnMobile"><a href="#">Literary Hetitage</a></li>
+                <li class="hideOnMobile"><a href="#">People</a></li>
+                <li class="hideOnMobile"><a href="#">Music & Dance</a></li>
+                <li class="hideOnMobile"><a href="#">Rivers</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="26" viewBox="0 96 960 960" fill="#f1f0ec" width="26">
+                            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="../images/Bihar/Nalanda/Nalanda.jpg">
+                <div class="content">
+                    <div class="type">Place</div>
+                    <div class="heritage">Nalanda Mahavihara</div>
+                    <div class="state">Bihar</div>
+                    <div class="des">
+
+                        Nalanda Mahavihara, located in Bihar, India, is an ancient Buddhist monastic university and a
+                        UNESCO World Heritage site. Established in the 5th century CE, it thrived as a major center of
+                        learning for over 700 years, attracting scholars from across Asia. The site includes stupas,
+                        shrines, viharas, and extensive manuscripts, reflecting a comprehensive curriculum that covered
+                        theology, philosophy, medicine, and more. Nalanda Mahavihara is a symbol of India's rich
+                        educational heritage and its historical significance in Buddhist studies.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/Bihar/mahabodhi/mahabodhi.jpg">
+                <div class="content">
+                    <div class="type">Place</div>
+                    <div class="heritage">Mahabodhi Temple</div>
+                    <div class="state">Bihar</div>
+                    <div class="des">
+                        The Mahabodhi Temple in Bodh Gaya, Bihar, India, is a UNESCO World Heritage site and a revered
+                        Buddhist pilgrimage destination. It marks the spot where Siddhartha Gautama, the Buddha,
+                        attained enlightenment around 531 BCE. Originally built by Emperor Ashoka in the 3rd century BCE
+                        and later reconstructed, the temple features a towering pyramidal spire and houses a descendant
+                        of the original Bodhi Tree. The Mahabodhi Temple is an exemplary piece of ancient Indian
+                        architecture and holds immense spiritual and cultural significance.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="../images/Bihar/Nalanda/Nalanda.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Nalanda Mahavihara
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/Bihar/mahabodhi/mahabodhi.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Mahabodhi Temple
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev">&#60;</button>
+            <button id="next">&#62;</button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+            const menu = document.querySelector('.menu-button')
+            menu.style.display = 'none'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+            const menu = document.querySelector('.menu-button')
+            menu.style.display = 'block'
+        }
+
+    </script>
+</body>
+
+</html>
