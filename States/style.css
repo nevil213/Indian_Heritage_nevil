@@ -42,11 +42,10 @@
   nav .sidebar a{
     color: black
   }
-  
   nav li:not(.menu-button, .close, .logo):hover{
     background-color: #DFD6C2;
     a{
-    color: black;
+    color: rgb(70, 57, 40);
     }
   }
   nav li:first-child{
@@ -323,9 +322,9 @@
     z-index: 1000;
     width: 0%;
     height: 3px;
-    background-color: #f1683a;
+    background-color: rgb(70, 57, 40);
     left: 0;
-    top: 0;
+    top: 50px;
 }
 
 .carousel.next .time,

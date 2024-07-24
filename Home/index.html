@@ -35,24 +35,26 @@
                             <path
                                 d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
                         </svg></a></li>
-                <li><a href="#">Places</a></li>
-                <li><a href="#">Festivals & Fair</a></li>
-                <li><a href="#">Festivals & Fair</a></li>
-                <li><a href="#">Cultural Hetitage</a></li>
-                <li><a href="#">Literary Hetitage</a></li>
-                <li><a href="#">People, Music & Dance</a></li>
-                <li><a href="#">People, Music & Dance</a></li>
+                <li><a href="../places/index.html">Places</a></li>
+                <li><a href="../festivals/index.html">Festivals</a></li>
+                <li><a href="../fair/index.html">Fair</a></li>
+                <li><a href="../cultural_heritage/index.html">Cultural Heritage</a></li>
+                <li><a href="../literature/index.html">Literature</a></li>
+                <li><a href="../people/index.html">People</a></li>
+                <li><a href="../musicndance/index.html">Music & Dance</a></li>
+                <li><a href="../rivers/index.html">Rivers</a></li>
             </ul>
             <ul>
-                <li class="logo"><img src="../images/logo.png" style="width: 50px; padding: 5px;"></li>
-                <li class="hideOnMobile"><a href="#">Places</a></li>
-                <li class="hideOnMobile"><a href="#">Festivals</a></li>
-                <li class="hideOnMobile"><a href="#">Fair</a></li>
-                <li class="hideOnMobile"><a href="#">Cultural Hetitage</a></li>
-                <li class="hideOnMobile"><a href="#">Literary Hetitage</a></li>
-                <li class="hideOnMobile"><a href="#">People</a></li>
-                <li class="hideOnMobile"><a href="#">Music & Dance</a></li>
-                <li class="hideOnMobile"><a href="#">Rivers</a></li>
+                <li class="logo"><img src="../images/logo.png" style="width: 50px; padding: 5px;cursor:pointer;"
+                        onclick="location.href='../Home/index.html'"></li>
+                <li class="hideOnMobile"><a href="../places/index.html">Places</a></li>
+                <li class="hideOnMobile"><a href="../festivals/index.html">Festivals</a></li>
+                <li class="hideOnMobile"><a href="../fair/index.html">Fair</a></li>
+                <li class="hideOnMobile"><a href="../cultural_heritage/index.html">Cultural Heritage</a></li>
+                <li class="hideOnMobile"><a href="../literature/index.html">Literature</a></li>
+                <li class="hideOnMobile"><a href="../people/index.html">People</a></li>
+                <li class="hideOnMobile"><a href="../musicndance/index.html">Music & Dance</a></li>
+                <li class="hideOnMobile"><a href="../rivers/index.html">Rivers</a></li>
                 <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
                             height="26" viewBox="0 96 960 960" fill="#f1f0ec" width="26">
                             <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
@@ -63,97 +65,100 @@
     <div class="banner">
 
         <div class="slider" style="--quantity: 8" id="animatedElement">
-            <div class="item" style="--position: 1"><img src="../images/home/places.jpg" alt="" onclick="location.href='../places/index.html'">
+            <div class="item" style="--position: 1"><img src="../images/home/places.jpg" onclick="location.href='../places/index.html'">
                 <div class="heritage">
                     Places
                 </div>
             </div>
-            <div class="item" style="--position: 2"><img src="../images/home/festivals.png" alt="">
-                <div class="heritage">
-                    Festivals
-                </div>
-            </div>
-            <div class="item" style="--position: 3"><img src="../images/home/fair.jpg" alt="">
-                <div class="heritage">
-                    Fair
-                </div>
-            </div>
-            <div class="item" style="--position: 4"><img src="../images/home/dance.jpg" alt="">
-                <div class="heritage">
-                    Music & Dance
-                </div>
-            </div>
-            <div class="item" style="--position: 5"><img src="../images/home/culture.jpg" alt="">
-                <div class="heritage">
-                    Culture
-                </div>
-            </div>
-            <div class="item" style="--position: 6"><img src="../images/home/literature.jpg" alt="">
-                <div class="heritage">
-                    Literature
-                </div>
-            </div>
-            <div class="item" style="--position: 7"><img src="../images/home/people.jpg" alt="">
+            <div class="item" style="--position: 8"><img src="../images/home/people.jpg" onclick="location.href='../places/index.html'">
                 <div class="heritage">
                     People
                 </div>
             </div>
-            <div class="item" style="--position: 8"><img src="../images/home/rivers.jpg" alt="">
+            <div class="item" style="--position: 7"><img src="../images/home/festivals.png" onclick="location.href='../festivals/index.html'">
+                <div class="heritage">
+                    Festivals
+                </div>
+            </div>
+            <div class="item" style="--position: 6"><img src="../images/home/fair.jpg" onclick="location.href='../fair/index.html'">
+                <div class="heritage">
+                    Fair
+                </div>
+            </div>
+            <div class="item" style="--position: 5"><img src="../images/home/dance.jpg" onclick="location.href='../musicndance/index.html'">
+                <div class="heritage">
+                    Music & Dance
+                </div>
+            </div>
+            <div class="item" style="--position: 4"><img src="../images/home/culture.jpg" onclick="location.href='../cultural_heritage/index.html'">
+                <div class="heritage">
+                    Culture
+                </div>
+            </div>
+            <div class="item" style="--position: 3"><img src="../images/home/literature.jpg" onclick="location.href='../literature/index.html'">
+                <div class="heritage">
+                    Literature
+                </div>
+            </div>
+            <div class="item" style="--position: 2"><img src="../images/home/rivers.jpg" onclick="location.href='../rivers/index.html'">
                 <div class="heritage">
                     Rivers
                 </div>
             </div>
         </div>
 
-        <div class="container">
-            <div id="app">
-                <div class="pause active">
-                    <div class="line line_1"></div>
-                    <div class="line line_2"></div>
-                </div>
-                <div class="play ">
-                    <div class="line line_1"></div>
-                    <div class="line line_2"></div>
-                    <div class="line line_3"></div>
-                </div>
-            </div>
+        <div class="arrows">
+            <button id="prev">&#60;</button>
+            <button id="next">&#62;</button>
         </div>
+
     </div>
     <script>
-        function showSidebar() {
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-            const menu = document.querySelector('.menu-button')
-            menu.style.display = 'none'
-        }
-        function hideSidebar() {
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-            const menu = document.querySelector('.menu-button')
-            menu.style.display = 'block'
-        }
+  function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+        const menu = document.querySelector('.menu-button');
+        menu.style.display = 'none';
+    }
 
-        
-        var pause = document.querySelector('.pause');
-        var play = document.querySelector('.play');
-        var btn = document.querySelector('#app');
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+        const menu = document.querySelector('.menu-button');
+        menu.style.display = 'block';
+    }
 
-        btn.addEventListener('click', () => {
-            if (play.classList.contains("active")) {
-                play.classList.remove("active");
-                pause.classList.add("active");
-            } else {
-                pause.classList.remove("active");
-                play.classList.add("active");
-            }
-        });
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+        const menu = document.querySelector('.menu-button');
+        menu.style.display = 'none';
+    }
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+        const menu = document.querySelector('.menu-button');
+        menu.style.display = 'block';
+    }
 
-        var container = document.querySelector('.container');
-        var slider = document.querySelector('.slider');
+    let currentRotation = 0;
+    const nextDom = document.getElementById('next');
+    const prevDom = document.getElementById('prev');
+    const sliderDom = document.querySelector('.slider');
 
-        container.addEventListener('click', function () {
-            slider.classList.toggle('paused');
-        });
+    nextDom.onclick = function () {
+        currentRotation += 45;
+        updateSliderRotation();
+    };
+
+    prevDom.onclick = function () {
+        currentRotation -= 45;
+        updateSliderRotation();
+    };
+
+    function updateSliderRotation() {
+        sliderDom.style.transform = `perspective(1000px) rotateX(-7deg) rotateY(${currentRotation}deg)`;
+    }
     </script>
 
 </body>
