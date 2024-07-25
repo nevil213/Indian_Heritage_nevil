@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .earth-container {
-  height: 98vh; /* Set the fixed height */
+  height: 92.8vh; /* Set the fixed height */
   overflow: hidden;
   position: relative;
-  border: 1px solid #000; /* Optional: for visual reference */
 }
 
 
@@ -21,9 +20,17 @@
     font-family: Poppins;
     font-size: 12px;
   }
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
   nav{
-    background-color: #f1683a;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+    box-shadow: 0px 2px 5px WHITE;
   }
   nav ul{
     width: 100%;
@@ -42,7 +49,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: #f1f0ec;
+    color: #ffffff;
     font-size: 120%;
   }
   
@@ -51,9 +58,9 @@
   }
   
   nav li:not(.menu-button, .close, .logo):hover{
-    background-color: #DFD6C2;
+    background-color: #ffffff;
     a{
-    color: black;
+    color: rgb(0, 0, 0);
     }
   }
   nav li:first-child{
@@ -62,7 +69,7 @@
   
   li:not(.menu-button, .close, .logo):hover::after{
     content: '';
-    background: rgb(70, 57, 40);
+    background: #495054;
     height: 4px;
     width: 100%;
     position: absolute;
@@ -124,7 +131,9 @@
   margin: auto;
   overflow: hidden;
   border-radius: 50%;
-  box-shadow: 0 0 20px 20px rgb(141, 92, 0) inset, 0 0 20px 2px rgb(92, 60, 0), inset -20px -20px 50px 2px #392200;
+  border-color: #fff;
+  border-width: 3px;
+  box-shadow: 0 0 20px 20px rgb(236, 236, 236) inset, 0 0 20px 2px rgb(219, 219, 219), inset -20px -20px 50px 2px #ebebeb;
   
 }
 
@@ -132,16 +141,6 @@
   width: 100%; /* Ensures the parent container is full width */
 
 }
-/* .earth::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: -20px -20px 50px 2px #392200 inset;
-  border-radius: 50%;
-} */
 
 
 .earth-shadow {
@@ -171,10 +170,9 @@
 }
 
 .zoom-effect {
-  
   animation: zoomIn 2.3s linear 0.3s forwards;
   position: absolute;
-  top: 270px;
+  top: 50px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -184,24 +182,31 @@
 @keyframes zoomIn {
   10% {
       transform: scale(1);
+      top: 50px;
   }
   30% {
       transform: scale(1.5);
+      top: 100px;
   }
   40% {
       transform: scale(2);
+      top: 125px;
   }
   60% {
       transform: scale(5);
+      top: 175px;
   }
   80% {
       transform: scale(8);
+      top: 225px;
   }
   90% {
       transform: scale(9);
+      top: 250px;
   }
   100% {
       transform: scale(10);
+      top: 250px;
   }
 }
 .svg-container {

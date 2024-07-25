@@ -7,8 +7,8 @@
 
 
 nav {
-  background-color: #f1683a;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.602);
   z-index: 1000;
   position: absolute;
   width: 100%;
@@ -34,7 +34,7 @@ nav a {
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: #f1f0ec;
+  color: white;
 }
 
 nav .sidebar a {
@@ -42,7 +42,7 @@ nav .sidebar a {
 }
 
 nav li:not(.menu-button, .close, .logo):hover {
-  background-color: #DFD6C2;
+  background-color: #ffffff;
 
   a {
     color: black;
@@ -55,7 +55,7 @@ nav li:first-child {
 
 li:not(.menu-button, .close, .logo):hover::after {
   content: '';
-  background: rgb(70, 57, 40);
+  background: rgb(0, 0, 0);
   height: 4px;
   width: 100%;
   position: absolute;
@@ -142,7 +142,7 @@ li:not(.menu-button, .close, .logo):hover::after {
   position: relative;
   width: 100%;
   font-size: 120%;
-  background-color: #ff4000;
+  background-color: #000000;
   border-radius: 6px;
   color: white;
   top: -25px;
@@ -218,7 +218,7 @@ li:not(.menu-button, .close, .logo):hover::after {
   min-width: 50px;
   min-height: 50px;
   border-radius: 50%;
-  background-color: #ff4000;
+  background-color: rgb(172, 172, 172);
   border: none;
   color: #fff;
   font-family: monospace;
@@ -228,10 +228,9 @@ li:not(.menu-button, .close, .logo):hover::after {
 }
 
 .arrows button:hover {
-  background-color: #f69170;
+  background-color: #ffffff;
   color: #000;
 }
-
 
 @media screen and (max-width: 1023px) {
   .arrows {
