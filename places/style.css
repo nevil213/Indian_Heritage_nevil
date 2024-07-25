@@ -23,7 +23,7 @@ body{
 }
 nav{
   background-color: #000;
-  box-shadow: 0px 2px 5px WHITE;
+  box-shadow: 0px 2px 5px white;
 }
 nav ul{
   width: 100%;
@@ -339,10 +339,10 @@ li:not(.menu-button, .close, .logo):hover::after{
 
 .carousel .time{
   position: absolute;
-  z-index: 1000;
+  z-index: 1001;
   width: 0%;
   height: 3px;
-  background-color: #f1683a;
+  background-color: #000000;
   left: 0;
   top: 0;
 }
