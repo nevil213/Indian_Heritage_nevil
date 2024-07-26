@@ -56,3 +56,6 @@ function showSlider(type){
 
 }
 
+$(window).load(function() {
+    $('#loading').hide();
+  });

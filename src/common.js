@@ -1,4 +1,15 @@
-//step 1: get DOM
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Show the loader
+    document.getElementById("loading").style.display = "block";
+});
+
+window.addEventListener("load", function() {
+    // Hide the loader
+    document.getElementById("loading").style.display = "none";
+});
+  
+  //step 1: get DOM
 let nextDom = document.getElementById('next');
 let prevDom = document.getElementById('prev');
 
