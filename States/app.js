@@ -18,6 +18,22 @@ nextDom.onclick = function(){
 prevDom.onclick = function(){
     showSlider('prev');    
 }
+
+let lastExecutionTime = 0;
+const debounceDelay = 3000; // 3000ms or 3 seconds
+
+document.addEventListener('keydown', function (event) {
+    const currentTime = Date.now();
+    if (currentTime - lastExecutionTime >= debounceDelay) {
+        if (event.key === 'ArrowLeft') {
+            prevDom.click();
+        } else if (event.key === 'ArrowRight') {
+            nextDom.click();
+        }
+        lastExecutionTime = currentTime;
+    }
+});
+
 let runTimeOut;
 function showSlider(type){
     let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');

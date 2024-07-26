@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
     <title>Festivals</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../src/common.css">
     <link rel="stylesheet" href="../src/output.css">
 </head>
 
@@ -21,7 +21,7 @@
                                 d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
                         </svg></a></li>
                 <li><a href="../places/index.html">Places</a></li>
-                <li><a href="../festivals/index.html">Festivals</a></li>
+                <li clas="current-nav"><a href="../festivals/index.html">Festivals</a></li>
                 <li><a href="../fair/index.html">Fair</a></li>
                 <li><a href="../cultural_heritage/index.html">Cultural Heritage</a></li>
                 <li><a href="../literature/index.html">Literature</a></li>
@@ -33,7 +33,7 @@
                 <li class="logo"><img src="../images/logo.png"
                         style="width: 40px; margin: 5px; border-radius:50%; cursor:pointer;"
                         onclick="location.href='../Home/index.html'"></li>
-                <li class="hideOnMobile bg-white"><a href="../places/">Places</a></li>
+                <li class="hideOnMobile"><a href="../places/">Places</a></li>
                 <li class="hideOnMobile current-nav"><a href="../festivals/index.html">Festivals</a></li>
                 <li class="hideOnMobile"><a href="../fair/index.html">Fair</a></li>
                 <li class="hideOnMobile"><a href="../cultural_heritage/index.html">Cultural Heritage</a></li>
@@ -391,7 +391,7 @@ The Pushkar Camel Fair is an annual cultural and livestock fair held in the town
         <div class="time"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="../src/common.js"></script>
     <script>
         function showSidebar() {
             const sidebar = document.querySelector('.sidebar')

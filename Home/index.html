@@ -71,34 +71,34 @@
                     Places
                 </div>
             </div>
-            <div class="item" style="--position: 8"><img src="../images/home/people.jpg" onclick="location.href='../places/index.html'">
-                <div class="heritage">
-                    People
-                </div>
-            </div>
-            <div class="item" style="--position: 7"><img src="../images/home/festivals.png" onclick="location.href='../festivals/index.html'">
+            <div class="item" style="--position: 8"><img src="../images/home/festivals.png" onclick="location.href='../festivals/index.html'">
                 <div class="heritage">
                     Festivals
                 </div>
             </div>
-            <div class="item" style="--position: 6"><img src="../images/home/fair.jpg" onclick="location.href='../fair/index.html'">
+            <div class="item" style="--position: 7"><img src="../images/home/fair.jpg" onclick="location.href='../fair/index.html'">
                 <div class="heritage">
                     Fair
                 </div>
             </div>
-            <div class="item" style="--position: 5"><img src="../images/home/dance.jpg" onclick="location.href='../musicndance/index.html'">
-                <div class="heritage">
-                    Music & Dance
-                </div>
-            </div>
-            <div class="item" style="--position: 4"><img src="../images/home/culture.jpg" onclick="location.href='../cultural_heritage/index.html'">
+            <div class="item" style="--position: 6"><img src="../images/home/culture.jpg" onclick="location.href='../cultural_heritage/index.html'">
                 <div class="heritage">
                     Culture
                 </div>
             </div>
-            <div class="item" style="--position: 3"><img src="../images/home/literature.jpg" onclick="location.href='../literature/index.html'">
+            <div class="item" style="--position: 5"><img src="../images/home/literature.jpg" onclick="location.href='../literature/index.html'">
                 <div class="heritage">
                     Literature
+                </div>
+            </div>
+            <div class="item" style="--position: 4"><img src="../images/home/people.jpg" onclick="location.href='../places/index.html'">
+                <div class="heritage">
+                    People
+                </div>
+            </div>
+            <div class="item" style="--position: 3"><img src="../images/home/dance.jpg" onclick="location.href='../musicndance/index.html'">
+                <div class="heritage">
+                    Music & Dance
                 </div>
             </div>
             <div class="item" style="--position: 2"><img src="../images/home/rivers.jpg" onclick="location.href='../rivers/index.html'">
@@ -116,50 +116,45 @@
     </div>
     <script>
   function showSidebar() {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.style.display = 'flex';
-        const menu = document.querySelector('.menu-button');
-        menu.style.display = 'none';
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'flex';
+    const menu = document.querySelector('.menu-button');
+    menu.style.display = 'none';
+  }
+
+  function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'none';
+    const menu = document.querySelector('.menu-button');
+    menu.style.display = 'block';
+  }
+
+  let currentRotation = 0;
+  const nextDom = document.getElementById('next');
+  const prevDom = document.getElementById('prev');
+  const sliderDom = document.querySelector('.slider');
+
+  nextDom.onclick = function () {
+    currentRotation += 45;
+    updateSliderRotation();
+  };
+
+  prevDom.onclick = function () {
+    currentRotation -= 45;
+    updateSliderRotation();
+  };
+
+  function updateSliderRotation() {
+    sliderDom.style.transform = `perspective(1000px) rotateX(-7deg) rotateY(${currentRotation}deg)`;
+  }
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowLeft') {
+      prevDom.click();
+    } else if (event.key === 'ArrowRight') {
+      nextDom.click();
     }
-
-    function hideSidebar() {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.style.display = 'none';
-        const menu = document.querySelector('.menu-button');
-        menu.style.display = 'block';
-    }
-
-    function showSidebar() {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.style.display = 'flex';
-        const menu = document.querySelector('.menu-button');
-        menu.style.display = 'none';
-    }
-    function hideSidebar() {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.style.display = 'none';
-        const menu = document.querySelector('.menu-button');
-        menu.style.display = 'block';
-    }
-
-    let currentRotation = 0;
-    const nextDom = document.getElementById('next');
-    const prevDom = document.getElementById('prev');
-    const sliderDom = document.querySelector('.slider');
-
-    nextDom.onclick = function () {
-        currentRotation += 45;
-        updateSliderRotation();
-    };
-
-    prevDom.onclick = function () {
-        currentRotation -= 45;
-        updateSliderRotation();
-    };
-
-    function updateSliderRotation() {
-        sliderDom.style.transform = `perspective(1000px) rotateX(-7deg) rotateY(${currentRotation}deg)`;
-    }
+  });
     </script>
 
 </body>

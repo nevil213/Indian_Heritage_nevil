@@ -229,7 +229,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
     color: #fff;
     font-family: monospace;
@@ -237,7 +237,7 @@
     transition: .5s;
 }
 .arrows button:hover{
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     color: #000;
 }
 
@@ -324,7 +324,7 @@
 /* running time */
 
 .carousel .time{
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     width: 0%;
     height: 3px;
@@ -410,7 +410,7 @@
     font-size: 14px;
   }
 
-  /* make responsive for lower screen device */
+/* make responsive for lower screen device */
 @media (max-width:668px){
     .carousel .list .item .content{
         top: 9%;
@@ -419,18 +419,26 @@
     overflow-y:visible;
     }
     .carousel .list .item .heritage{
-        font-size: 3em;
+        font-size: 4em;
     }
     .carousel .list .item .state{
-        font-size: 3em;
+        font-size: 4em;
     }
     .thumbnail{
-        bottom:-12%
+        position: fixed;
+        bottom:2%;
     }
     .arrows{ 
-        bottom:0%
+        position: fixed;
+        top:82.3%;
     }
     .carousel .list .item{
         height: 112%;
+    }
+}
+
+@media(max-width: 1170px){
+    .arrows{ 
+        top:86%;
     }
 }

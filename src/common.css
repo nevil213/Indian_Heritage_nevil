@@ -194,7 +194,7 @@
 }
 /* thumbail */
 .thumbnail{
-    position: absolute;
+    position: fixed;
     bottom: 50px;
     left: 50%;
     width: max-content;
@@ -231,7 +231,7 @@
 }
 /* arrows */
 .arrows{
-    position: absolute;
+    position: fixed;
     top: 80%;
     right: 52%;
     z-index: 100;
@@ -245,7 +245,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
     color: #fff;
     font-family: monospace;
@@ -253,7 +253,7 @@
     transition: .5s;
 }
 .arrows button:hover{
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     color: #000;
 }
 
@@ -337,7 +337,7 @@
 /* running time */
 
 .carousel .time{
-    position: absolute;
+    position: fixed;
     z-index: 1001;
     width: 0%;
     height: 3px;
@@ -437,12 +437,20 @@
         font-size: 4em;
     }
     .thumbnail{
-        bottom:-12%
+        position: fixed;
+        bottom:2%;
     }
     .arrows{ 
-        bottom:0%
+        position: fixed;
+        top:82.3%;
     }
     .carousel .list .item{
         height: 112%;
+    }
+}
+
+@media(max-width: 1170px){
+    .arrows{ 
+        top:86%;
     }
 }
