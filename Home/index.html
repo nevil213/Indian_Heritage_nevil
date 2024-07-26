@@ -28,6 +28,8 @@
 </head>
 
 <body>
+    <div id="loader">
+        </div>
     <header>
         <nav class="z-1000 relative">
             <ul class="sidebar z-1000">
@@ -115,6 +117,22 @@
 
     </div>
     <script>
+        let time1sec = 1000;
+let loader = document.getElementById("loader");
+
+window.addEventListener("load", function() {
+  loader.style.display = "block"; // Show the loader
+
+  // Hide the loader after 1 second
+  let timeoutId = setTimeout(function() {
+    loader.style.display = "none";
+  }, time1sec);
+
+  // Remove the timeout if the page finishes loading before 1 second
+  window.addEventListener("load", function() {
+    clearTimeout(timeoutId);
+  });
+});
   function showSidebar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'flex';

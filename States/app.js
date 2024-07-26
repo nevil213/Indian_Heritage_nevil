@@ -1,3 +1,20 @@
+let time1sec = 1000;
+let loader = document.getElementById("loader");
+
+window.addEventListener("load", function() {
+  loader.style.display = "block"; // Show the loader
+
+  // Hide the loader after 1 second
+  let timeoutId = setTimeout(function() {
+    loader.style.display = "none";
+  }, time1sec);
+
+  // Remove the timeout if the page finishes loading before 1 second
+  window.addEventListener("load", function() {
+    clearTimeout(timeoutId);
+  });
+});
+
 //step 1: get DOM
 let nextDom = document.getElementById('next');
 let prevDom = document.getElementById('prev');

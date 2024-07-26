@@ -5,6 +5,19 @@
   padding: 0;
 }
 
+#loader {
+  position: fixed;
+  background: #000 url(../images/loader.gif) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  background-size: 15%;
+  z-index: 10000;
+}
+@media (max-width:1170px) {
+  #loader {
+      background-size: 40%;
+  }
+}
 
 nav {
   background-color: black;
