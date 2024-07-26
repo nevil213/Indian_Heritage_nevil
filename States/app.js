@@ -55,7 +55,3 @@ function showSlider(type){
     }, timeRunning);
 
 }
-
-$(window).load(function() {
-    $('#loading').hide();
-  });
