@@ -154,8 +154,8 @@
     color: black;
     text-shadow: 0px 0px 5px rgb(255, 255, 255);
 }
-.carousel .list .item .heritage,.carousel .list .item .des{
-    
+.carousel .list .item .heritage,.carousel .list .item .des,
+.carousel .list .item .type{
     text-shadow: 0px 0px 5px black;
 }
 .carousel .list .item .buttons{
@@ -394,9 +394,6 @@
     .carousel .list .item .content{
         padding-right: 0;
     }
-    .carousel .list .item .content .heritage{
-        font-size: 30px;
-    }
 }
 
 .list .item img{
@@ -412,3 +409,28 @@
   .des{
     font-size: 14px;
   }
+
+  /* make responsive for lower screen device */
+@media (max-width:668px){
+    .carousel .list .item .content{
+        top: 9%;
+    }
+    .carousel{
+    overflow-y:visible;
+    }
+    .carousel .list .item .heritage{
+        font-size: 3em;
+    }
+    .carousel .list .item .state{
+        font-size: 3em;
+    }
+    .thumbnail{
+        bottom:-12%
+    }
+    .arrows{ 
+        bottom:0%
+    }
+    .carousel .list .item{
+        height: 112%;
+    }
+}
