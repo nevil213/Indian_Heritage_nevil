@@ -15,6 +15,13 @@ window.addEventListener("load", function() {
   });
 });
 
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    if(loader.style.display = 'none'){
+    document.body.classList.add('loaded');
+}
+});
+
   //step 1: get DOM
 let nextDom = document.getElementById('next');
 let prevDom = document.getElementById('prev');

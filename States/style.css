@@ -431,6 +431,9 @@
     .carousel{
     overflow-y:visible;
     }
+    .carousel .list .item img{
+        position: fixed;
+    }
     .carousel .list .item .heritage{
         font-size: 4em;
     }
