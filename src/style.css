@@ -120,6 +120,22 @@
   .z-1000{
     z-index: 1000;
   }
+  .current-nav{
+    background-color: #fff;
+    a{
+      color: #000;
+  }
+  }
+  .current-nav::after{
+    content: '';
+    background: #495054;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
 .earth {
   width: 300px;
   height: 300px;
