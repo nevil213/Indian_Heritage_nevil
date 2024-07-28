@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    <title>Kerala</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+
+<body>
+    <div id="loader">
+        </div>
+    <header>
+        <nav class="z-1000 relative">
+            <ul class="sidebar z-1000">
+                <li onclick=hideSidebar() class="close"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                            viewBox="0 96 960 960" width="26" fill="#f1f0ec">
+                            <path
+                                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                        </svg></a></li>
+                <li><a href="../places/index.html">Places</a></li>
+                <li><a href="../festivals/index.html">Festivals</a></li>
+                <li><a href="../fair/index.html">Fair</a></li>
+                <li><a href="../Arts/index.html">Arts</a></li>
+                <li><a href="../literature/index.html">Literature</a></li>
+                <li><a href="../people/index.html">People</a></li>
+                <li><a href="../musicndance/index.html">Music & Dance</a></li>
+                <li><a href="../rivers/index.html">Rivers</a></li>
+            </ul>
+            <ul>
+                <li class="logo"><img src="../images/logo.png" style="width: 50px; padding: 5px;cursor:pointer;" onclick="location.href='../Home/index.html'"></li>
+                <li class="hideOnMobile"><a href="../places/index.html">Places</a></li>
+                <li class="hideOnMobile"><a href="../festivals/index.html">Festivals</a></li>
+                <li class="hideOnMobile"><a href="../fair/index.html">Fair</a></li>
+                <li class="hideOnMobile"><a href="../Arts/index.html">Arts</a></li>
+                <li class="hideOnMobile"><a href="../literature/index.html">Literature</a></li>
+                <li class="hideOnMobile"><a href="../people/index.html">People</a></li>
+                <li class="hideOnMobile"><a href="../musicndance/index.html">Music & Dance</a></li>
+                <li class="hideOnMobile"><a href="../rivers/index.html">Rivers</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="26" viewBox="0 96 960 960" fill="#f1f0ec" width="26">
+                            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="../images/Kerala/Padmanabhapuram_Palace.jpg">
+                <div class="content">
+                    <div class="type">Place</div>
+                    <div class="heritage">
+                        Padmanabhapuram Palace</div>
+                    <div class="state">Kerala</div>
+                    <div class="des">
+
+                        Padmanabhapuram Palace, located in the town of Padmanabhapuram in Tamil Nadu, India, is a magnificent example of traditional Kerala architecture. Constructed in the 16th century, it was the seat of the Travancore kingdom's rulers. The palace is renowned for its intricate wooden carvings, murals, and a unique blend of Kerala and Dravidian architectural styles. Key features include the King's Council Chamber (Mantrasala), the Queen's Palace (Uppirikka Malika), and a clock tower over 200 years old. The palace's historical and architectural significance makes it an important heritage site in India.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="../images/Kerala/Padmanabhapuram_Palace.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Padmanabhapuram Palace
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev">&#60;</button>
+            <button id="next">&#62;</button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+            const menu = document.querySelector('.menu-button')
+            menu.style.display = 'none'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+            const menu = document.querySelector('.menu-button')
+            menu.style.display = 'block'
+        }
+
+    </script>
+</body>
+
+</html>
