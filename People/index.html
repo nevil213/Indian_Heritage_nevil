@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    <title>People</title>
+    <link rel="stylesheet" href="../src/common.css">
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<style>
+    
+.carousel .list .item .type2{
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .type2{
+    color: black;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.carousel .list .item:nth-child(1) .content .type2
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+.carousel .list .item:nth-child(1) .content .type2{
+    animation-delay: 1.4s!important;
+}
+
+.carousel.prev .list .item:nth-child(2) .content .type2
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+    .carousel .list .item .type2{
+        font-size: 2em;
+    }
+</style>
+
+<body>
+
+    <div id="loader">
+    </div>
+    <header>
+        <nav class="z-1000 relative">
+            <ul class="sidebar z-1000">
+                <li onclick=hideSidebar() class="close"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                            viewBox="0 96 960 960" width="26" fill="#f1f0ec">
+                            <path
+                                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                        </svg></a></li>
+                <li><a href="../places/index.html">Places</a></li>
+                <li><a href="../festivals/index.html">Festivals</a></li>
+                <li><a href="../fair/index.html">Fair</a></li>
+                <li><a href="../cultural_heritage/index.html">Cultural Heritage</a></li>
+                <li><a href="../literature/index.html">Literature</a></li>
+                <li class="current-nav"><a href="../people/index.html">People</a></li>
+                <li><a href="../musicndance/index.html">Music & Dance</a></li>
+                <li><a href="../rivers/index.html">Rivers</a></li>
+            </ul>
+            <ul class="z-1000">
+                <li class="logo"><img src="../images/logo.png" style="width: 40px; margin: 5px; border-radius:50%; cursor:pointer;" onclick="location.href='../Home/index.html'"></li>
+                <li class="hideOnMobile"><a href="../places/index.html">Places</a></li>
+                <li class="hideOnMobile"><a href="../festivals/index.html">Festivals</a></li>
+                <li class="hideOnMobile"><a href="../fair/index.html">Fair</a></li>
+                <li class="hideOnMobile"><a href="../cultural_heritage/index.html">Cultural Heritage</a></li>
+                <li class="hideOnMobile"><a href="../literature/index.html">Literature</a></li>
+                <li class="hideOnMobile current-nav"><a href="../people/index.html">People</a></li>
+                <li class="hideOnMobile"><a href="../musicndance/index.html">Music & Dance</a></li>
+                <li class="hideOnMobile"><a href="../rivers/index.html">Rivers</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="26" viewBox="0 96 960 960" fill="#f1f0ec" width="26">
+                            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="../images/People/aryans.jpg">
+                <div class="content">
+                    <div class="type">People</div>
+                    <div class="heritage">Indo-Aryans</div>
+                    <div class="type2">Linguistic Categorization</div>
+                    <div class="des">
+                        
+The Indo-Aryans are a significant group in Indian heritage, traditionally believed to have migrated to the Indian subcontinent around 1500 BCE. They brought with them the Vedic culture, which laid the foundation for the Hindu religion and the Sanskrit language. The Vedic texts, including the Rigveda, are some of the oldest sacred scriptures in India, shaping its philosophical, cultural, and social systems. The Indo-Aryans contributed to the development of classical Indian civilization, influencing art, literature, and governance. Their heritage is reflected in India's rich traditions of rituals, festivals, and classical literature.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Dravidians.jpg">
+                <div class="content">
+                    <div class="type">People</div>
+                    <div class="heritage">Dravidians</div>
+                    <div class="type2">Linguistic Categorization</div>
+                    <div class="des">
+                        
+The Dravidians are an ancient people native to the Indian subcontinent, primarily inhabiting the southern regions of India. They are known for their distinct language family, the Dravidian languages, which includes Tamil, Telugu, Kannada, and Malayalam. The Dravidian culture is characterized by rich traditions in architecture, literature, and art, with notable achievements such as the ancient city of Mohenjo-daro and the classical Sangam literature. They also have a profound influence on Indian classical music and dance forms, such as Bharatanatyam and Carnatic music. Dravidian heritage is a vital part of India's diverse cultural landscape, reflecting deep historical roots and contributions to Indian civilization.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Mongoloids.jpg">
+                <div class="content">
+                    <div class="type">People</div>
+                    <div class="heritage">Mongoloids</div>
+                    <div class="type2">Linguistic Categorization</div>
+                    <div class="des">
+                        The Mongoloid peoples in Indian heritage primarily refer to the indigenous communities in the northeastern region of India. These groups, including the Nagas, Mizos, and Bodos, among others, have distinct ethnic, linguistic, and cultural characteristics, often linked to the broader Mongoloid racial classification. They have rich traditions in folklore, music, dance, and crafts, contributing to the region's vibrant cultural mosaic. The traditional festivals, such as Bihu in Assam and Hornbill Festival in Nagaland, showcase their unique heritage. The Mongoloid communities have played a crucial role in the cultural diversity and unity of India, preserving their distinct identity while integrating into the broader Indian society.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Tibeto-Burman.jpg">
+                <div class="content">
+                    <div class="type">People</div>
+                    <div class="heritage">Tibeto-Burman</div>
+                    <div class="type2">Linguistic Categorization</div>
+                    <div class="des">
+                        The Tibeto-Burman peoples are a significant ethnic and linguistic group in the Indian subcontinent, particularly in the northeastern states like Arunachal Pradesh, Nagaland, Manipur, and Assam. They speak Tibeto-Burman languages, part of the larger Sino-Tibetan language family. These communities have rich cultural traditions, including distinct music, dance, and art forms. They also celebrate unique festivals, such as Losar and Bihu, reflecting their vibrant cultural heritage. The Tibeto-Burman groups contribute to India's diversity, showcasing a blend of indigenous traditions and a deep connection to the Himalayan region.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Hindus.jpg">
+                <div class="content">
+                    <div class="type">People</div>
+                    <div class="heritage">Hindus</div>
+                    <div class="type2">Religious Categorization</div>
+                    <div class="des">
+                        Hinduism is one of the oldest religions in the world and a major component of Indian heritage. It is characterized by a rich tapestry of beliefs, rituals, and philosophies, with sacred texts such as the Vedas, Upanishads, and Bhagavad Gita. Hinduism emphasizes concepts like dharma (duty), karma (action and its consequences), and moksha (liberation). It has a vast pantheon of deities, including Brahma, Vishnu, Shiva, and Devi, and is known for its diverse practices, festivals, and pilgrimage traditions. Hindu culture profoundly influences India's art, literature, music, dance, and social structure, making it a foundational aspect of Indian civilization.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Muslims.jpg">
+                <div class="content">
+                    <div class="type">People</div>
+                    <div class="heritage">Muslims</div>
+                    <div class="type2">Religious Categorization</div>
+                    <div class="des">
+                        Muslims are a significant religious community in India, contributing richly to the country's heritage. Islam arrived in India in the 7th century and has since become an integral part of the Indian cultural fabric. Indian Muslims follow diverse traditions, including Sunni and Shia practices, with a rich legacy of scholarship, poetry, and Sufism. They have greatly influenced Indian architecture, seen in iconic structures like the Taj Mahal and Qutb Minar, and have contributed to the development of Indian music, dance, and cuisine. Festivals such as Eid-ul-Fitr and Eid-ul-Adha are widely celebrated, showcasing the community's vibrant cultural expressions. Indian Muslims have been pivotal in shaping the country's history and continue to play a vital role in its cultural and social life.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Sikhs.jpg">
+                <div class="content">
+                    <div class="type">People</div>
+                    <div class="heritage">Sikhs</div>
+                    <div class="type2">Religious Categorization</div>
+                    <div class="des">
+                        
+Sikhism is a monotheistic religion that originated in the Punjab region of India in the 15th century, founded by Guru Nanak Dev Ji. Sikhs are known for their distinct identity, symbolized by the five articles of faith known as the Five Ks. Sikh teachings emphasize devotion to one God, equality, social justice, and community service. The Guru Granth Sahib, the holy scripture of Sikhism, is a central spiritual guide. Sikh heritage is celebrated in the Golden Temple in Amritsar, one of the most revered places of worship. The community also marks important festivals like Vaisakhi and Guru Nanak Jayanti, reflecting their rich cultural and religious traditions. Sikh contributions to Indian culture, history, and social life are substantial and enduring.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Buddhist.webp">
+                <div class="content">
+                    <div class="type">People</div>
+                    <div class="heritage">Buddhist</div>
+                    <div class="type2">Religious Categorization</div>
+                    <div class="des">
+                        
+Buddhism, founded by Siddhartha Gautama, known as the Buddha, in the 5th century BCE, is a major religious and philosophical tradition that originated in India. It emphasizes the Four Noble Truths and the Eightfold Path as a way to achieve enlightenment and liberation from suffering. Indian heritage is deeply influenced by Buddhism, evident in historical sites like Bodh Gaya, Sarnath, and Ajanta Caves. The religion promotes values like compassion, mindfulness, and non-violence. Buddhist art, philosophy, and monastic traditions have significantly shaped Indian culture and continue to be a vital part of the country's spiritual and cultural landscape. Buddhism's teachings and heritage have spread globally, impacting cultures and societies beyond India.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Jain.jpg">
+                <div class="content">
+                    <div class="type">People</div>
+                    <div class="heritage">Jain</div>
+                    <div class="type2">Religious Categorization</div>
+                    <div class="des">
+                        
+Jainism is an ancient Indian religion founded on principles of non-violence (ahimsa), truth (satya), and asceticism. It emphasizes spiritual purity and the liberation of the soul through self-discipline and ethical living. Key figures in Jainism include the 24 Tirthankaras, with Mahavira being the last and most notable. Jains revere the sacred texts called Agamas. The religion has significantly influenced Indian culture, particularly in art, architecture, and philosophy, with notable sites like the Dilwara Temples and the Gomateshwara statue. Jainism's focus on non-violence extends to strict vegetarianism and a commitment to environmentalism, reflecting its deep ethical values and contributions to India's diverse spiritual heritage.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/christian.jpg">
+                <div class="content">
+                    <div class="type">People</div>
+                    <div class="heritage">Christian</div>
+                    <div class="type2">Religious Categorization</div>
+                    <div class="des">
+                        
+Christianity in India dates back to the early centuries CE, with a rich tradition particularly among the Saint Thomas Christians, believed to have been established by the apostle Thomas. Indian Christians are diverse, encompassing denominations such as Roman Catholic, Protestant, and Eastern Orthodox. Christianity has significantly influenced Indian culture through its educational institutions, healthcare services, and social welfare initiatives. The religion's festivals, such as Christmas and Easter, are widely celebrated, and Christian art, architecture, and music add to India's cultural mosaic. Notable landmarks include the churches of Goa and the St. Thomas Basilica in Chennai. Indian Christians have contributed to the country's social and cultural fabric, advocating for values of compassion, service, and human dignity.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="../images/People/aryans.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Indo-Aryans
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Dravidians.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Dravidians
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Mongoloids.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Mongoloids
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Tibeto-Burman.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Tibeto-Burman
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Hindus.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Hindus
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Muslims.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Muslims
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Sikhs.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Sikhs
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Buddhist.webp">
+                <div class="content">
+                    <div class="heritage">
+                        Buddhist
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/Jain.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Jain
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/People/christian.jpg">
+                <div class="content">
+                    <div class="heritage">
+                        Christian
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev">&#60;</button>
+            <button id="next">&#62;</button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+    <script src="../src/common.js"></script>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+            const menu = document.querySelector('.menu-button')
+            menu.style.display = 'none'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+            const menu = document.querySelector('.menu-button')
+            menu.style.display = 'block'
+        }
+
+    </script>
+</body>
+
+</html>
