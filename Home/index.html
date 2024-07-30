@@ -16,20 +16,26 @@
         }
 
         body {
-            background-color: #D2D2D2;
-            background-image:
-                repeating-linear-gradient(to right, transparent 0 100px,
-                    #25283b22 100px 101px),
-                repeating-linear-gradient(to bottom, transparent 0 100px,
-                    #25283b22 100px 101px);
+            background-color: #ffffff;
+        }
+
+        .bg-home{
+            max-height:100px;
+        }
+
+        .banner {
+
+            background: url(../images/bg-home.jpg);
+            object-fit: cover;
+
         }
     </style>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style0.css">
 </head>
 
 <body>
     <div id="loader">
-        </div>
+    </div>
     <header>
         <nav class="z-1000 relative">
             <ul class="sidebar z-1000">
@@ -48,7 +54,8 @@
                 <li><a href="../rivers/index.html">Rivers</a></li>
             </ul>
             <ul>
-                <li class="logo"><img src="../images/logo.png" style="width: 40px; margin: 5px; border-radius:50%; cursor:pointer;"
+                <li class="logo"><img src="../images/logo.png"
+                        style="width: 40px; margin: 5px; border-radius:50%; cursor:pointer;"
                         onclick="location.href='../Home/index.html'"></li>
                 <li class="hideOnMobile"><a href="../places/index.html">Places</a></li>
                 <li class="hideOnMobile"><a href="../festivals/index.html">Festivals</a></li>
@@ -65,114 +72,124 @@
             </ul>
         </nav>
     </header>
-    <div class="banner">
+    <div class="bg-home">
+        <div class="banner">
 
-        <div class="slider" style="--quantity: 8" id="animatedElement">
-            <div class="item" style="--position: 1"><img src="../images/home/places.jpg" onclick="location.href='../places/index.html'">
-                <div class="heritage">
-                    Places
+            <div class="slider" style="--quantity: 8" id="animatedElement">
+                <div class="item" style="--position: 1"><img src="../images/home/places.jpg"
+                        onclick="location.href='../places/index.html'">
+                    <div class="heritage">
+                        Places
+                    </div>
+                </div>
+                <div class="item" style="--position: 8"><img src="../images/home/festivals.png"
+                        onclick="location.href='../festivals/index.html'">
+                    <div class="heritage">
+                        Festivals
+                    </div>
+                </div>
+                <div class="item" style="--position: 7"><img src="../images/home/fair.jpg"
+                        onclick="location.href='../fair/index.html'">
+                    <div class="heritage">
+                        Fair
+                    </div>
+                </div>
+                <div class="item" style="--position: 6"><img src="../images/home/Arts.jpg"
+                        onclick="location.href='../Arts/index.html'">
+                    <div class="heritage">
+                        Arts
+                    </div>
+                </div>
+                <div class="item" style="--position: 5"><img src="../images/home/literature.jpg"
+                        onclick="location.href='../literature/index.html'">
+                    <div class="heritage">
+                        Literature
+                    </div>
+                </div>
+                <div class="item" style="--position: 4"><img src="../images/home/people.jpg"
+                        onclick="location.href='../places/index.html'">
+                    <div class="heritage">
+                        People
+                    </div>
+                </div>
+                <div class="item" style="--position: 3"><img src="../images/home/dance.jpg"
+                        onclick="location.href='../musicndance/index.html'">
+                    <div class="heritage">
+                        Music & Dance
+                    </div>
+                </div>
+                <div class="item" style="--position: 2"><img src="../images/home/rivers.jpg"
+                        onclick="location.href='../rivers/index.html'">
+                    <div class="heritage">
+                        Rivers
+                    </div>
                 </div>
             </div>
-            <div class="item" style="--position: 8"><img src="../images/home/festivals.png" onclick="location.href='../festivals/index.html'">
-                <div class="heritage">
-                    Festivals
-                </div>
+
+            <div class="arrows">
+                <button id="prev">&#60;</button>
+                <button id="next">&#62;</button>
             </div>
-            <div class="item" style="--position: 7"><img src="../images/home/fair.jpg" onclick="location.href='../fair/index.html'">
-                <div class="heritage">
-                    Fair
-                </div>
-            </div>
-            <div class="item" style="--position: 6"><img src="../images/home/Arts.jpg" onclick="location.href='../Arts/index.html'">
-                <div class="heritage">
-                    Arts
-                </div>
-            </div>
-            <div class="item" style="--position: 5"><img src="../images/home/literature.jpg" onclick="location.href='../literature/index.html'">
-                <div class="heritage">
-                    Literature
-                </div>
-            </div>
-            <div class="item" style="--position: 4"><img src="../images/home/people.jpg" onclick="location.href='../places/index.html'">
-                <div class="heritage">
-                    People
-                </div>
-            </div>
-            <div class="item" style="--position: 3"><img src="../images/home/dance.jpg" onclick="location.href='../musicndance/index.html'">
-                <div class="heritage">
-                    Music & Dance
-                </div>
-            </div>
-            <div class="item" style="--position: 2"><img src="../images/home/rivers.jpg" onclick="location.href='../rivers/index.html'">
-                <div class="heritage">
-                    Rivers
-                </div>
-            </div>
+
         </div>
-
-        <div class="arrows">
-            <button id="prev">&#60;</button>
-            <button id="next">&#62;</button>
-        </div>
-
     </div>
     <script>
         let time1sec = 1000;
-let loader = document.getElementById("loader");
+        let loader = document.getElementById("loader");
 
-window.addEventListener("load", function() {
-  loader.style.display = "block"; // Show the loader
+        window.addEventListener("load", function () {
+            loader.style.display = "block"; // Show the loader
 
-  // Hide the loader after 1 second
-  let timeoutId = setTimeout(function() {
-    loader.style.display = "none";
-  }, time1sec);
+            // Hide the loader after 1 second
+            let timeoutId = setTimeout(function () {
+                loader.style.display = "none";
+            }, time1sec);
 
-  // Remove the timeout if the page finishes loading before 1 second
-  window.addEventListener("load", function() {
-    clearTimeout(timeoutId);
-  });
-});
-  function showSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'flex';
-    const menu = document.querySelector('.menu-button');
-    menu.style.display = 'none';
-  }
+            // Remove the timeout if the page finishes loading before 1 second
+            window.addEventListener("load", function () {
+                clearTimeout(timeoutId);
+            });
+        });
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+            const menu = document.querySelector('.menu-button');
+            menu.style.display = 'none';
+        }
 
-  function hideSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'none';
-    const menu = document.querySelector('.menu-button');
-    menu.style.display = 'block';
-  }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+            const menu = document.querySelector('.menu-button');
+            menu.style.display = 'block';
+        }
 
-  let currentRotation = 0;
-  const nextDom = document.getElementById('next');
-  const prevDom = document.getElementById('prev');
-  const sliderDom = document.querySelector('.slider');
+        let currentRotation = 0;
+        const nextDom = document.getElementById('next');
+        const prevDom = document.getElementById('prev');
+        const sliderDom = document.querySelector('.slider');
 
-  nextDom.onclick = function () {
-    currentRotation += 45;
-    updateSliderRotation();
-  };
+        nextDom.onclick = function () {
+            currentRotation += 45;
+            updateSliderRotation();
+        };
 
-  prevDom.onclick = function () {
-    currentRotation -= 45;
-    updateSliderRotation();
-  };
+        prevDom.onclick = function () {
+            currentRotation -= 45;
+            updateSliderRotation();
+        };
 
-  function updateSliderRotation() {
-    sliderDom.style.transform = `perspective(1000px) rotateX(-7deg) rotateY(${currentRotation}deg)`;
-  }
+        function updateSliderRotation() {
+            sliderDom.style.transform = `perspective(1000px) rotateX(-7deg) rotateY(${currentRotation}deg)`;
+        }
 
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'ArrowLeft') {
-      prevDom.click();
-    } else if (event.key === 'ArrowRight') {
-      nextDom.click();
-    }
-  });
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowLeft') {
+                prevDom.click();
+            } else if (event.key === 'ArrowRight') {
+                nextDom.click();
+            }
+        });
     </script>
 
 </body>
