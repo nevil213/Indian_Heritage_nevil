@@ -339,7 +339,7 @@
     }
 }
 .carousel.next .thumbnail{
-    animation: effectNext .5s linear 1 forwards;
+    animation: effectNext .5s linear 1 forwards!important;
 }
 
 @keyframes effectNext{
