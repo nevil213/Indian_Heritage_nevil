@@ -7,6 +7,51 @@ window.addEventListener("load", function () {
     // Hide the loader after 1 second
     let timeoutId = setTimeout(function () {
         loader.style.display = "none";
+        if (window.innerWidth > 1024) {
+            document.querySelector('.mycircle, .mycursor').style.display = 'block';
+            document.querySelector('body').style.cursor = 'none';
+
+            // Select the .mycircle element
+            let cursor = document.querySelector('.mycircle');
+
+            // Function to add .hover class
+            function addHoverClass() {
+                cursor.classList.add('hover');
+            }
+
+            // Function to remove .hover class
+            function removeHoverClass() {
+                cursor.classList.remove('hover');
+            }
+
+            // Select all elements with .type, .heritage, and .state classes
+            let hoverElements = document.querySelectorAll('.type, .heritage, .state');
+
+            // Add event listeners to each element
+            hoverElements.forEach(element => {
+                element.addEventListener('mouseenter', addHoverClass);
+                element.addEventListener('mouseleave', removeHoverClass);
+            });
+
+            // Function to add .cursor_difference class
+            function addDifferenceClass() {
+                cursor.classList.add('cursor_difference');
+            }
+
+            // Function to remove .cursor_difference class
+            function removeDifferenceClass() {
+                cursor.classList.remove('cursor_difference');
+            }
+
+            // Select all elements with .type, .heritage, and .state classes
+            let hoverImage = document.querySelectorAll('nav, .des, .thumbnail .heritage, button, footer');
+
+            // Add event listeners to each element
+            hoverImage.forEach(element => {
+                element.addEventListener('mouseenter', addDifferenceClass);
+                element.addEventListener('mouseleave', removeDifferenceClass);
+            });
+        }
     }, time1sec);
 
     // Remove the timeout if the page finishes loading before 1 second
@@ -15,7 +60,7 @@ window.addEventListener("load", function () {
     });
 });
 
-//step 1: get DOM
+
 let nextDom = document.getElementById('next');
 let prevDom = document.getElementById('prev');
 
@@ -86,46 +131,4 @@ window.addEventListener('scroll', function () {
         thumb.style.animation = 'thumnarrows_show 0.3s linear forwards';
         arrows.style.animation = 'thumnarrows_show 0.3s linear forwards';
     }
-});
-
-// Select the .mycircle element
-let cursor = document.querySelector('.mycircle');
-
-// Function to add .hover class
-function addHoverClass() {
-    cursor.classList.add('hover');
-}
-
-// Function to remove .hover class
-function removeHoverClass() {
-    cursor.classList.remove('hover');
-}
-
-// Select all elements with .type, .heritage, and .state classes
-let hoverElements = document.querySelectorAll('.type, .list .heritage, .state');
-
-// Add event listeners to each element
-hoverElements.forEach(element => {
-    element.addEventListener('mouseenter', addHoverClass);
-    element.addEventListener('mouseleave', removeHoverClass);
-});
-
-
-// Function to add .hover class
-function addDifferenceClass() {
-    cursor.classList.add('cursor_difference');
-}
-
-// Function to remove .hover class
-function removeDifferencerClass() {
-    cursor.classList.remove('cursor_difference');
-}
-
-// Select all elements with .type, .heritage, and .state classes
-let hoverImage = document.querySelectorAll('nav, .des, .thumbnail .heritage, button, footer');
-
-// Add event listeners to each element
-hoverImage.forEach(element => {
-    element.addEventListener('mouseenter', addDifferenceClass);
-    element.addEventListener('mouseleave', removeDifferencerClass);
 });

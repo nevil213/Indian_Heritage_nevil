@@ -14,7 +14,6 @@
     font-family: Poppins;
     font-size: 12px;
     overflow-x: hidden;
-    cursor: none;
   }
   #loader {
     position: fixed;
@@ -159,6 +158,10 @@ header li:not(.menu-button, .close, .logo):hover::after{
   height: 50px;
   width: 50px;
   z-index: 9999;
+}
+
+.mycircle, .mycursor {
+  display:none;
 }
 
 h1, h2 {
