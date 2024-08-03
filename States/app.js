@@ -1,18 +1,18 @@
 let time1sec = 1000;
 let loader = document.getElementById("loader");
 
-window.addEventListener("load", function() {
-  loader.style.display = "block"; // Show the loader
+window.addEventListener("load", function () {
+    loader.style.display = "block"; // Show the loader
 
-  // Hide the loader after 1 second
-  let timeoutId = setTimeout(function() {
-    loader.style.display = "none";
-  }, time1sec);
+    // Hide the loader after 1 second
+    let timeoutId = setTimeout(function () {
+        loader.style.display = "none";
+    }, time1sec);
 
-  // Remove the timeout if the page finishes loading before 1 second
-  window.addEventListener("load", function() {
-    clearTimeout(timeoutId);
-  });
+    // Remove the timeout if the page finishes loading before 1 second
+    window.addEventListener("load", function () {
+        clearTimeout(timeoutId);
+    });
 });
 
 //step 1: get DOM
@@ -28,12 +28,12 @@ let timeDom = document.querySelector('.carousel .time');
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 3000;
 
-nextDom.onclick = function(){
-    showSlider('next');    
+nextDom.onclick = function () {
+    showSlider('next');
 }
 
-prevDom.onclick = function(){
-    showSlider('prev');    
+prevDom.onclick = function () {
+    showSlider('prev');
 }
 
 let lastExecutionTime = 0;
@@ -52,15 +52,15 @@ document.addEventListener('keydown', function (event) {
 });
 
 let runTimeOut;
-function showSlider(type){
-    let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+function showSlider(type) {
+    let SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
     let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
-    
-    if(type === 'next'){
+
+    if (type === 'next') {
         SliderDom.appendChild(SliderItemsDom[0]);
         thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
         carouselDom.classList.add('next');
-    }else{
+    } else {
         SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
         thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
         carouselDom.classList.add('prev');
@@ -72,3 +72,18 @@ function showSlider(type){
     }, timeRunning);
 
 }
+
+
+
+window.addEventListener('scroll', function () {
+    let thumb = document.querySelector('.thumbnail');
+    let arrows = document.querySelector('.arrows');
+    var scrollHeight = window.innerHeight;
+    if (window.scrollY > (scrollHeight*0.4)) {
+        thumb.style.animation = 'thumnarrows_hide 0.3s linear forwards';
+        arrows.style.animation = 'thumnarrows_hide 0.3s linear forwards';
+    } else {
+        thumb.style.animation = 'thumnarrows_show 0.3s linear forwards';
+        arrows.style.animation = 'thumnarrows_show 0.3s linear forwards';
+    }
+});
