@@ -279,6 +279,10 @@ h1 > span, h2 > span {
 .carousel .list .item .buttons button:hover{
     background-color: #495054;
 }
+.carousel .list .item .buttons a{
+  text-decoration: none!important;
+  color: #fff !important;
+}
 /* thumbail */
 .thumbnail{
     position: absolute;
@@ -504,7 +508,7 @@ h1 > span, h2 > span {
   
   @keyframes brightness{
     to{
-        filter: brightness(0.8);
+        filter: brightness(0.6);
     }
   }
 

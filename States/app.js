@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
             }
 
             // Select all elements with .type, .heritage, and .state classes
-            let hoverElements = document.querySelectorAll('.type, .heritage, .state');
+            let hoverElements = document.querySelectorAll('.type, .list .heritage, .state');
 
             // Add event listeners to each element
             hoverElements.forEach(element => {
@@ -59,6 +59,41 @@ window.addEventListener("load", function () {
         clearTimeout(timeoutId);
     });
 });
+
+
+            
+(function () {
+    const cursor = document.querySelector(".mycursor");
+    const circle = document.querySelector(".mycircle");
+    const links = document.querySelectorAll(".elementor-heading-title");
+    const editPosCursor = (e) => {
+        const { clientX: x, clientY: y } = e;
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+        circle.style.left = x + "px";
+        circle.style.top = y + "px";
+    };
+    const animateit = function (e) {
+        const span = this.querySelector("span");
+        const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+            move = 25,
+            xMove = (x / width) * (move * 2) - move,
+            yMove = (y / height) * (move * 2) - move;
+
+        span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        circle.classList.add("hover");
+        // links.forEach((alink) => alink.classList.add("alink"));
+        if (e.type === "mouseleave") {
+            circle.classList.remove("hover");
+            // links.forEach((alink) => alink.classList.remove("alink"));
+            span.style.transform = "";
+        }
+    };
+    window.addEventListener("mousemove", editPosCursor);
+    links.forEach((link) => link.addEventListener("mousemove", animateit));
+    links.forEach((link) => link.addEventListener("mouseleave", animateit));
+})();
 
 
 let nextDom = document.getElementById('next');
