@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    <title>Heritage Horizons</title>
     <style>
 
 * {
@@ -46,7 +47,7 @@
             </ul>
             <ul>
                 <li class="logo"><img src="../images/logo.png"
-                        style="width: 40px; margin: 5px; border-radius:50%; cursor:pointer;"
+                        style="width: 90px; margin: 5px; cursor:pointer;"
                         onclick="location.href='../Home/index.html'"></li>
                 <li class="hideOnMobile"><a href="../places/index.html">Places</a></li>
                 <li class="hideOnMobile"><a href="../festivals/index.html">Festivals</a></li>
@@ -63,6 +64,9 @@
             </ul>
         </nav>
     </header>
+    
+<div class="mycircle"></div>
+<div class="mycursor"></div>
 
     <div class="bg-home">
 
@@ -655,21 +659,83 @@
 
     <script>
         let time1sec = 1000;
-        let loader = document.getElementById("loader");
+let loader = document.getElementById("loader");
 
-        window.addEventListener("load", function () {
-            loader.style.display = "block"; // Show the loader
+window.addEventListener("load", function () {
+    loader.style.display = "block"; // Show the loader
 
-            // Hide the loader after 1 second
-            let timeoutId = setTimeout(function () {
-                loader.style.display = "none";
-            }, time1sec);
+    // Hide the loader after 1 second
+    let timeoutId = setTimeout(function () {
+        loader.style.display = "none";
+        if (window.innerWidth > 1024) {
+            document.querySelector('.mycircle, .mycursor').style.display = 'block';
+            document.querySelector('body').style.cursor = 'none';
 
-            // Remove the timeout if the page finishes loading before 1 second
-            window.addEventListener("load", function () {
-                clearTimeout(timeoutId);
+            // Select the .mycircle element
+            let cursor = document.querySelector('.mycircle');
+
+            // Function to add .cursor_difference class
+            function addDifferenceClass() {
+                cursor.classList.add('cursor_difference');
+            }
+
+            // Function to remove .cursor_difference class
+            function removeDifferenceClass() {
+                cursor.classList.remove('cursor_difference');
+            }
+
+            // Select all elements with .type, .heritage, and .state classes
+            let hoverImage = document.querySelectorAll('nav, .slider, button, footer');
+
+            // Add event listeners to each element
+            hoverImage.forEach(element => {
+                element.addEventListener('mouseenter', addDifferenceClass);
+                element.addEventListener('mouseleave', removeDifferenceClass);
             });
-        });
+        }
+    }, time1sec);
+
+    // Remove the timeout if the page finishes loading before 1 second
+    window.addEventListener("load", function () {
+        clearTimeout(timeoutId);
+    });
+});
+
+
+            
+(function () {
+    const cursor = document.querySelector(".mycursor");
+    const circle = document.querySelector(".mycircle");
+    const links = document.querySelectorAll(".elementor-heading-title");
+    const editPosCursor = (e) => {
+        const { clientX: x, clientY: y } = e;
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+        circle.style.left = x + "px";
+        circle.style.top = y + "px";
+    };
+    const animateit = function (e) {
+        const span = this.querySelector("span");
+        const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+            move = 25,
+            xMove = (x / width) * (move * 2) - move,
+            yMove = (y / height) * (move * 2) - move;
+
+        span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        circle.classList.add("hover");
+        // links.forEach((alink) => alink.classList.add("alink"));
+        if (e.type === "mouseleave") {
+            circle.classList.remove("hover");
+            // links.forEach((alink) => alink.classList.remove("alink"));
+            span.style.transform = "";
+        }
+    };
+    window.addEventListener("mousemove", editPosCursor);
+    links.forEach((link) => link.addEventListener("mousemove", animateit));
+    links.forEach((link) => link.addEventListener("mouseleave", animateit));
+})();
+
         function showSidebar() {
             const sidebar = document.querySelector('.sidebar');
             sidebar.style.display = 'flex';
