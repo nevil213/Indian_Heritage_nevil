@@ -80,7 +80,7 @@
     margin-right: auto;
   }
   
-  li:not(.menu-button, .close, .logo):hover::after{
+  header li:not(.menu-button, .close, .logo):hover::after{
     content: '';
     background: #495054;
     height: 4px;

@@ -345,6 +345,9 @@ ul {
     margin: 0px;
     padding: 0px;
 }
+.container{
+  overflow-x: hidden;
+}
 .footer-section {
   background: #151414;
   position: relative;
@@ -357,6 +360,10 @@ ul {
   font-size: 30px;
   float: left;
   margin-top: 8px;
+}
+.single-cta{
+  display: flex;
+  margin-top:10px;
 }
 .cta-text {
   padding-left: 15px;
