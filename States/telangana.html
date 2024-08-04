@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
-    <title>Delhi</title>
+    <title>Telangana</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../src/output.css">
 </head>
 
 <body>
+
     <div id="loader">
-        </div>
+    </div>
     <header>
         <nav class="z-1000 relative">
             <ul class="sidebar z-1000">
@@ -24,18 +27,18 @@
                 <li><a href="../places/index.html">Places</a></li>
                 <li><a href="../festivals/index.html">Festivals</a></li>
                 <li><a href="../fair/index.html">Fair</a></li>
-                <li><a href="../cultural_heritage/index.html">Cultural Heritage</a></li>
+                <li><a href="../Arts/index.html">Arts</a></li>
                 <li><a href="../literature/index.html">Literature</a></li>
                 <li><a href="../people/index.html">People</a></li>
                 <li><a href="../musicndance/index.html">Music & Dance</a></li>
                 <li><a href="../rivers/index.html">Rivers</a></li>
             </ul>
-            <ul>
-                <li class="logo"><img src="../images/logo.png" style="width: 50px; padding: 5px;cursor:pointer;" onclick="location.href='../Home/index.html'"></li>
+            <ul class="z-1000">
+                <li class="logo"><img src="../images/logo.png" style="width: 90px; margin: 5px;cursor:pointer;" onclick="location.href='../Home/index.html'"></li>
                 <li class="hideOnMobile"><a href="../places/index.html">Places</a></li>
                 <li class="hideOnMobile"><a href="../festivals/index.html">Festivals</a></li>
                 <li class="hideOnMobile"><a href="../fair/index.html">Fair</a></li>
-                <li class="hideOnMobile"><a href="../cultural_heritage/index.html">Cultural Heritage</a></li>
+                <li class="hideOnMobile"><a href="../Arts/index.html">Arts</a></li>
                 <li class="hideOnMobile"><a href="../literature/index.html">Literature</a></li>
                 <li class="hideOnMobile"><a href="../people/index.html">People</a></li>
                 <li class="hideOnMobile"><a href="../musicndance/index.html">Music & Dance</a></li>
@@ -47,6 +50,10 @@
             </ul>
         </nav>
     </header>
+
+    <div class="mycircle"></div>
+    <div class="mycursor"></div>
+        
 
     <!-- carousel -->
     <div class="carousel">
@@ -63,7 +70,7 @@
                         The architecture of the Bahmani and Deccan Sultanates, spanning from the 14th to the 17th centuries, is a remarkable fusion of Persian, Turkish, and indigenous Indian styles. Prominent structures include the Gol Gumbaz in Bijapur, with its massive dome and whispering gallery, and the Jama Masjid in Gulbarga, known for its grand arches and domes. The Bahmani Sultanate's capital, Bidar, features the impressive Bidar Fort and the ornate madrasa of Mahmud Gawan. These sultanates are also credited with creating unique Indo-Islamic garden tombs and mosques. The architectural legacy of the Bahmani and Deccan Sultanates reflects their rich cultural milieu and significant contributions to India's historical and architectural heritage.
                     </div>
                     <div class="buttons">
-                        <button>SEE MORE</button>
+                        <button onclick="window.open('https://en.wikipedia.org/wiki/Architecture_of_the_Bahmani_and_Deccan_Sultanates','_blank')">SEE MORE</button>
                     </div>
                 </div>
             </div>
@@ -77,7 +84,7 @@
                         Golconda Fort, located in Hyderabad, Telangana, India, is a monumental fortress renowned for its impressive military architecture and historical significance. Originally built in the 13th century by the Kakatiya dynasty and later expanded by the Qutb Shahi rulers, the fort features massive gates, robust bastions, and intricate water supply systems. It is famed for its acoustic marvels, such as the echoing clap at the entrance, and its grand Fateh Darwaza (Victory Gate). Golconda was once a flourishing center of trade and the diamond industry, home to the legendary Koh-i-Noor and Hope diamonds. This fort stands as a testament to India's rich cultural and architectural heritage.
                     </div>
                     <div class="buttons">
-                        <button>SEE MORE</button>
+                        <button onclick="window.open('https://en.wikipedia.org/wiki/Golconda','_blank')">SEE MORE</button>
                     </div>
                 </div>
             </div>
@@ -119,6 +126,111 @@
         <!-- time running -->
         <div class="time"></div>
     </div>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>SVNIT,Ichchhanath, Surat, Gujarat, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>+919876543210</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>theheritagehorizons@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="../Home/index.html"><img src="../images/footer_logo.png" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>Explore India's rich cultural tapestry through a curated collection of places,
+                                    festivals, arts, literature, people, music, dance, and rivers, celebrating the
+                                    diverse heritage that defines our nation.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="../Home/index.html">Home</a></li>
+                                <li><a href="../people/index.html">People</a></li>
+                                <li><a href="../places/index.html">Places</a></li>
+                                <li><a href="../musicndance/index.html">Music & Dance</a></li>
+                                <li><a href="../festivals/index.html">Festivals</a></li>
+                                <li><a href="../rivers/index.html">Rivers</a></li>
+                                <li><a href="../fair/index.html">Fair</a></li>
+                                <li><a href="../Arts/index.html">Arts</a></li>
+                                <li><a href="../literature/index.html">Literature</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe for updates dedicated to Indian heritage. kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form id="subscribeForm">
+                                    <input type="text" name="name" placeholder="Enter your name" required><br>
+                                    <input type="email" name="email" placeholder="Enter your email" required>
+                                    <button type="submit">Subscribe!</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2024, All Right Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
 
     <script src="app.js"></script>
     <script>

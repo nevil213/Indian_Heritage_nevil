@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
-    <title>Uttar Pradesh</title>
+    <title>Uttar pradesh</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -35,8 +35,8 @@
             </ul>
             <ul class="z-1000">
                 <li class="logo"><img src="../images/logo.png"
-                        style="width: 90px; margin: 5px; cursor:pointer;"
-                        onclick="location.href='../Home/index.html'"></li>
+                    style="width: 90px; margin: 5px; cursor:pointer;"
+                    onclick="location.href='../Home/index.html'"></li>
                 <li class="hideOnMobile"><a href="../places/index.html">Places</a></li>
                 <li class="hideOnMobile"><a href="../festivals/index.html">Festivals</a></li>
                 <li class="hideOnMobile"><a href="../fair/index.html">Fair</a></li>
@@ -46,13 +46,13 @@
                 <li class="hideOnMobile"><a href="../musicndance/index.html">Music & Dance</a></li>
                 <li class="hideOnMobile"><a href="../rivers/index.html">Rivers</a></li>
                 <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                            height="26" viewBox="0 96 960 960" fill="#f1f0ec" width="26">
-                            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
-                        </svg></a></li>
+                    height="26" viewBox="0 96 960 960" fill="#f1f0ec" width="26">
+                    <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                </svg></a></li>
             </ul>
         </nav>
     </header>
-
+    
     <div class="mycircle"></div>
     <div class="mycursor"></div>
     <!-- carousel -->
@@ -296,12 +296,13 @@
                                 <h3>Subscribe</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                <p>Don’t miss to subscribe for updates dedicated to Indian heritage. kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                <form id="subscribeForm">
+                                    <input type="text" name="name" placeholder="Enter your name" required><br>
+                                    <input type="email" name="email" placeholder="Enter your email" required>
+                                    <button type="submit">Subscribe!</button>
                                 </form>
                             </div>
                         </div>

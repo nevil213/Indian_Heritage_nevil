@@ -696,22 +696,32 @@ ul {
 .subscribe-form input {
   width: 100%;
   padding: 14px 28px;
-  background: #2E2E2E;
-  border: 1px solid #2E2E2E;
+  padding-left: 0px;
+  background: #151414;
+  border-bottom: 1px solid #ffffff;
   color: #fff;
+  margin-bottom: 5%;
 }
 .subscribe-form button {
-    position: absolute;
-    right: 0;
-    background: #9c9c9c;
-    padding: 13px 20px;
-    border: 1px solid #9c9c9c;
-    top: 0;
+  position: relative;
+  right: 0;
+  padding: 13px 20px;
+  margin-top: 5%;
+  border: 1px solid #ffffff;
+  top: 0;
+  width: 100%;
+  color: white;
+  padding-right: calc(100% - 100px);
+}
+.subscribe-form button:hover {
+  background: #ffffff;
+  color: #000000;
 }
 .subscribe-form button i {
   color: #fff;
   font-size: 22px;
   transform: rotate(-6deg);
+  margin-left: calc(-100% + 28px);
 }
 .copyright-area{
   background: #202020;

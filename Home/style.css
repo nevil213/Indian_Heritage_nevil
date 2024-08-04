@@ -484,17 +484,19 @@ ul {
   color: #fff;
 }
 .subscribe-form button {
-    position: absolute;
-    right: 0;
-    background: #9c9c9c;
-    padding: 13px 20px;
-    border: 1px solid #9c9c9c;
-    top: 0;
+  position: relative;
+  right: 0;
+  background: #9c9c9c;
+  padding: 13px 20px;
+  border: 1px solid #9c9c9c;
+  top: 0;
+  width: 100%;
 }
 .subscribe-form button i {
-  color: #fff;
-  font-size: 22px;
-  transform: rotate(-6deg);
+color: #fff;
+font-size: 22px;
+transform: rotate(-6deg);
+margin-left: calc(-100% + 28px);
 }
 .copyright-area{
   background: #202020;
