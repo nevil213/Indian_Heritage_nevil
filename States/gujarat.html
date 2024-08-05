@@ -402,13 +402,15 @@
                                 <h3>Subscribe</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                <p>Don’t miss to subscribe for updates dedicated to Indian heritage. kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
                                 <form id="subscribeForm">
                                     <input type="text" name="name" placeholder="Enter your name" required><br>
                                     <input type="email" name="email" placeholder="Enter your email" required>
-                                    <button type="submit"><i class="fab fa-telegram-plane"></i></button>
+                                    <button type="submit" id="subscribeButton">Subscribe!</button>
+                                    <div class="spinner" id="spinner"></div>
+                                    <div id="responseMessage" style="margin-top: 10px; color: rgb(255, 255, 255);"></div>
                                 </form>
                             </div>
                         </div>

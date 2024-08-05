@@ -631,12 +631,15 @@
                                 <h3>Subscribe</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                <p>Don’t miss to subscribe for updates dedicated to Indian heritage. kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                <form id="subscribeForm">
+                                    <input type="text" name="name" placeholder="Enter your name" required><br>
+                                    <input type="email" name="email" placeholder="Enter your email" required>
+                                    <button type="submit" id="subscribeButton">Subscribe!</button>
+                                    <div class="spinner" id="spinner"></div>
+                                    <div id="responseMessage" style="margin-top: 10px; color: rgb(255, 255, 255);"></div>
                                 </form>
                             </div>
                         </div>
@@ -776,6 +779,74 @@ window.addEventListener("load", function () {
                 nextDom.click();
             }
         });
+
+        
+document.addEventListener("DOMContentLoaded", function() {
+    const inputs = document.querySelectorAll('.subscribe-form input');
+  
+    inputs.forEach(input => {
+      input.addEventListener('input', function() {
+        if (input.value) {
+          input.style.paddingLeft = '28px';
+        } else {
+          input.style.paddingLeft = '0px';
+        }
+      });
+    });
+  });
+
+document.getElementById('subscribeForm').addEventListener('submit', submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+    var name = document.querySelector('input[name="name"]').value;
+    var email = document.querySelector('input[name="email"]').value;
+
+    // Disable the submit button and show the spinner
+    var button = document.getElementById('subscribeButton');
+    var spinner = document.getElementById('spinner');
+    var responseMessage = document.getElementById('responseMessage');
+    button.disabled = true;
+    spinner.style.display = 'inline-block';
+    button.style.color = '#151414';
+    button.addEventListener('mouseover', () => {
+        button.style.color = '#151414';
+    });
+    button.addEventListener('mouseout', () => {
+        button.style.color = '#151414';
+    });
+
+    fetch('https://script.google.com/macros/s/AKfycby5vTUOI8xfPR--x_WXL7RCYRswEsUuol1ImstKCt_m0K4uafpU_6aStjTMouPx-CiO/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ 'name': name, 'email': email })
+    }).then(response => {
+        // As we are using no-cors mode, we can't access the response data
+        alert('Thank you for subscribing!');
+        document.getElementById('subscribeForm').reset(); // Reset the form
+        button.disabled = false; // Re-enable the submit button
+        spinner.style.display = 'none'; // Hide the spinner
+        button.style.color = 'white';
+        button.addEventListener('mouseover', () => {
+            button.style.color = 'black';
+        });
+        button.addEventListener('mouseout', () => {
+            button.style.color = 'white';
+        });
+    }).catch(error => {
+        console.error('Error!', error.message);
+        button.disabled = false; // Re-enable the submit button in case of error
+        spinner.style.display = 'none'; // Hide the spinner in case of error
+        button.style.color = 'white';
+        button.addEventListener('mouseover', () => {
+            button.style.color = 'black';
+        });
+        button.addEventListener('mouseout', () => {
+            button.style.color = 'white';
+        });
+    });
+}
     </script>
 </body>
 </html>

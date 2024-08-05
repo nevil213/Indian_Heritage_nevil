@@ -693,6 +693,13 @@ ul {
   position: relative;
   overflow: hidden;
 }
+
+#subscribeForm{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .subscribe-form input {
   width: 100%;
   padding: 14px 28px;
@@ -702,6 +709,12 @@ ul {
   color: #fff;
   margin-bottom: 5%;
 }
+
+.subscribe-form input::placeholder {
+  padding-left: 0;
+  text-align: left; /* Ensures the placeholder text is aligned to the left */
+}
+
 .subscribe-form button {
   position: relative;
   right: 0;
@@ -711,38 +724,72 @@ ul {
   top: 0;
   width: 100%;
   color: white;
-  padding-right: calc(100% - 100px);
 }
+
 .subscribe-form button:hover {
   background: #ffffff;
   color: #000000;
 }
-.subscribe-form button i {
-  color: #fff;
-  font-size: 22px;
-  transform: rotate(-6deg);
-  margin-left: calc(-100% + 28px);
+
+/* Style for loading spinner */
+.spinner {
+  display: none;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: -35px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
 }
-.copyright-area{
+
+.spinner:hover{
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #000000;
+}
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.copyright-area {
   background: #202020;
   padding: 25px 0;
 }
+
 .copyright-text p {
   margin: 0;
   font-size: 14px;
   color: #878787;
 }
-.copyright-text p a{
-  color: #9c9c9c;
-}
+
 .footer-menu li {
   display: inline-block;
   margin-left: 20px;
 }
-.footer-menu li:hover a{
+
+.footer-menu li:hover a {
   color: #9c9c9c;
 }
+
 .footer-menu li a {
   font-size: 14px;
   color: #878787;
+}
+
+@media (max-width:668px) {
+
+  .footer-logo img {
+    max-width: 200px;
+  }
+
 }
