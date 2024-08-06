@@ -185,34 +185,9 @@
     transition: transform .1s linear;
   }
   
-  .mycircle.hover {
-    transform: translate(-50%, -50%) scale(2.5);
-    animation: liquid 2.5s linear infinite;
-    mix-blend-mode: difference;
-    background-color: white;
-  }
-  
   .mycircle.cursor_difference{
     mix-blend-mode: difference;
     background-color: white;
-  }
-  
-  @keyframes liquid {
-    0%, 100% {
-        border-radius: 28% 72% 46% 54% / 22% 50% 50% 78%;
-    }
-  
-    25% {
-        border-radius: 73% 27% 41% 59% / 49% 20% 80% 51%;
-    }
-  
-    50% {
-        border-radius: 47% 53% 28% 72% / 49% 76% 24% 51%;
-    }
-  
-    75% {
-        border-radius: 48% 52% 68% 32% / 78% 54% 46% 22%;
-    }
   }
   
   @media (max-width: 1024px) {

@@ -1,44 +1,52 @@
-// Select the .mycircle element
-let cursor = document.querySelector('.mycircle');
+let time1sec = 1000;
+let loader = document.getElementById("loader");
+let spin = document.getElementById("earth");
+let zoom = document.querySelector('.zoom-effect');
+let svgBlack = document.getElementById("black-30");
 
-// Function to add .hover class
-function addHoverClass() {
-    cursor.classList.add('hover');
-}
 
-// Function to remove .hover class
-function removeHoverClass() {
-    cursor.classList.remove('hover');
-}
+window.addEventListener("load", function () {
+    loader.style.display = "block"; // Show the loader
 
-// Select all elements with .type, .heritage, and .state classes
-let hoverElements = document.querySelectorAll('.type, .list .heritage, .state');
+    // Hide the loader after 1 second
+    let timeoutId = setTimeout(function () {
+        loader.style.display = "none";
+        spin.style.animation = "spin 2.6s linear forwards";
+        zoom.style.animation = "zoomIn 2.3s linear 0.3s forwards";
+        svgBlack.style.animation = "showblack 3s linear 0s forwards";
+        if (window.innerWidth > 1024) {
+            document.querySelector('.mycircle, .mycursor').style.display = 'block';
+            document.querySelector('body').style.cursor = 'none';
 
-// Add event listeners to each element
-hoverElements.forEach(element => {
-    element.addEventListener('mouseenter', addHoverClass);
-    element.addEventListener('mouseleave', removeHoverClass);
+            // Select the .mycircle element
+            let cursor = document.querySelector('.mycircle');
+
+            // Function to add .cursor_difference class
+            function addDifferenceClass() {
+                cursor.classList.add('cursor_difference');
+            }
+
+            // Function to remove .cursor_difference class
+            function removeDifferenceClass() {
+                cursor.classList.remove('cursor_difference');
+            }
+
+            // Select all elements with .type, .heritage, and .state classes
+            let hoverImage = document.querySelectorAll('nav, footer, svg');
+
+            // Add event listeners to each element
+            hoverImage.forEach(element => {
+                element.addEventListener('mouseenter', addDifferenceClass);
+                element.addEventListener('mouseleave', removeDifferenceClass);
+            });
+        }
+    }, time1sec);
+
+    // Remove the timeout if the page finishes loading before 1 second
+    window.addEventListener("load", function () {
+        clearTimeout(timeoutId);
+    });
 });
-
-// Function to add .cursor_difference class
-function addDifferenceClass() {
-    cursor.classList.add('cursor_difference');
-}
-
-// Function to remove .cursor_difference class
-function removeDifferenceClass() {
-    cursor.classList.remove('cursor_difference');
-}
-
-// Select all elements with .type, .heritage, and .state classes
-let hoverImage = document.querySelectorAll('nav, .des, .thumbnail .heritage, button, footer, svg');
-
-// Add event listeners to each element
-hoverImage.forEach(element => {
-    element.addEventListener('mouseenter', addDifferenceClass);
-    element.addEventListener('mouseleave', removeDifferenceClass);
-});
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
