@@ -282,7 +282,7 @@ h2>span {
 
 .carousel .list .item .heritage,
 .carousel .list .item .state {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bold;
   line-height: 1.3em;
 }
@@ -591,11 +591,11 @@ h2>span {
   }
 
   .carousel .list .item .heritage {
-    font-size: 4em;
+    font-size: 3em;
   }
 
   .carousel .list .item .state {
-    font-size: 4em;
+    font-size: 3em;
   }
 
   .thumbnail {
@@ -828,6 +828,7 @@ ul {
   padding: 13px 20px;
   margin-top: 5%;
   border: 1px solid #ffffff;
+  background: #151414;
   top: 0;
   width: 100%;
   color: white;
