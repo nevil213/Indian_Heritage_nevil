@@ -68,7 +68,8 @@ nav li:first-child {
   margin-right: auto;
 }
 
-.mycircle, .mycursor {
+.mycircle,
+.mycursor {
   position: fixed;
   background: #000000;
   border-radius: 50%;
@@ -89,16 +90,19 @@ nav li:first-child {
   z-index: 9999;
 }
 
-.mycircle, .mycursor {
-  display:none;
+.mycircle,
+.mycursor {
+  display: none;
 }
 
-h1, h2 {
+h1,
+h2 {
   z-index: 10;
   transition: transform 0.3s ease;
 }
 
-h1 > span, h2 > span {
+h1>span,
+h2>span {
   display: inline-block;
   pointer-events: none;
   transition: transform .1s linear;
@@ -111,32 +115,36 @@ h1 > span, h2 > span {
   background-color: white;
 }
 
-.mycircle.cursor_difference{
+.mycircle.cursor_difference {
   mix-blend-mode: difference;
   background-color: white;
 }
 
 @keyframes liquid {
-  0%, 100% {
-      border-radius: 28% 72% 46% 54% / 22% 50% 50% 78%;
+
+  0%,
+  100% {
+    border-radius: 28% 72% 46% 54% / 22% 50% 50% 78%;
   }
 
   25% {
-      border-radius: 73% 27% 41% 59% / 49% 20% 80% 51%;
+    border-radius: 73% 27% 41% 59% / 49% 20% 80% 51%;
   }
 
   50% {
-      border-radius: 47% 53% 28% 72% / 49% 76% 24% 51%;
+    border-radius: 47% 53% 28% 72% / 49% 76% 24% 51%;
   }
 
   75% {
-      border-radius: 48% 52% 68% 32% / 78% 54% 46% 22%;
+    border-radius: 48% 52% 68% 32% / 78% 54% 46% 22%;
   }
 }
 
 @media (max-width: 1024px) {
-  .mycircle, .mycursor {
-      display:none;
+
+  .mycircle,
+  .mycursor {
+    display: none;
   }
 }
 
@@ -594,6 +602,7 @@ ul {
   padding: 14px 28px;
   padding-left: 0px;
   background: #151414;
+  border: none;
   border-bottom: 1px solid #ffffff;
   color: #fff;
   margin-bottom: 5%;

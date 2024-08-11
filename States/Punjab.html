@@ -7,9 +7,22 @@
     <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
     <title>Punjab</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../src/output.css">
+    <style>
+        @media (max-width:668px) {
+
+            .carousel .list .item .heritage {
+                font-size: 3em;
+            }
+
+            .carousel .list .item .state {
+                font-size: 3em;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -34,7 +47,8 @@
                 <li><a href="../rivers/index.html">Rivers</a></li>
             </ul>
             <ul class="z-1000">
-                <li class="logo"><img src="../images/logo.png" style="width: 90px; margin: 5px; cursor:pointer;" onclick="location.href='../Home/index.html'"></li>
+                <li class="logo"><img src="../images/logo.png" style="width: 90px; margin: 5px; cursor:pointer;"
+                        onclick="location.href='../Home/index.html'"></li>
                 <li class="hideOnMobile"><a href="../places/index.html">Places</a></li>
                 <li class="hideOnMobile"><a href="../festivals/index.html">Festivals</a></li>
                 <li class="hideOnMobile"><a href="../fair/index.html">Fair</a></li>
@@ -51,7 +65,7 @@
         </nav>
     </header>
     <div class="mycircle"></div>
-<div class="mycursor"></div>
+    <div class="mycursor"></div>
     <!-- carousel -->
     <div class="carousel">
         <!-- list item -->
@@ -61,14 +75,22 @@
                 <div class="content">
                     <div class="type">Place</div>
                     <div class="heritage">Golden Temple</div>
-                    <div class="state"style="font-size: 2em;">Punjab</div>
+                    <div class="state">Punjab</div>
                     <div class="des">
-                        The Golden Temple, or Harmandir Sahib, is a prominent Sikh gurdwara located in Amritsar, Punjab, India. Renowned for its stunning golden dome and reflective pool, the temple is a major pilgrimage site and a symbol of Sikhism. It was founded by Guru Ram Das, the fourth Sikh Guru, and later renovated by Maharaja Ranjit Singh. The temple's architecture combines elements of Hindu and Islamic styles, reflecting its inclusive spiritual ethos. It is also known for its community kitchen (langar), which serves free meals to thousands of visitors daily. The Golden Temple is revered for its spiritual significance, architectural beauty, and commitment to humanitarian service.
+                        The Golden Temple, or Harmandir Sahib, is a prominent Sikh gurdwara located in Amritsar, Punjab,
+                        India. Renowned for its stunning golden dome and reflective pool, the temple is a major
+                        pilgrimage site and a symbol of Sikhism. It was founded by Guru Ram Das, the fourth Sikh Guru,
+                        and later renovated by Maharaja Ranjit Singh. The temple's architecture combines elements of
+                        Hindu and Islamic styles, reflecting its inclusive spiritual ethos. It is also known for its
+                        community kitchen (langar), which serves free meals to thousands of visitors daily. The Golden
+                        Temple is revered for its spiritual significance, architectural beauty, and commitment to
+                        humanitarian service.
 
 
                     </div>
                     <div class="buttons">
-                        <button onclick="window.open('https://en.wikipedia.org/wiki/Golden_Temple', '_blank')">SEE MORE</button>
+                        <button
+                            onclick="window.open('https://en.wikipedia.org/wiki/Golden_Temple', '_blank')">SEE MORE</button>
                     </div>
                 </div>
             </div>
@@ -132,7 +154,8 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="../Home/index.html"><img src="../images/footer_logo.png" class="img-fluid" alt="logo"></a>
+                                <a href="../Home/index.html"><img src="../images/footer_logo.png" class="img-fluid"
+                                        alt="logo"></a>
                             </div>
                             <div class="footer-text">
                                 <p>Explore India's rich cultural tapestry through a curated collection of places,
@@ -171,7 +194,8 @@
                                 <h3>Subscribe</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>Don’t miss to subscribe for updates dedicated to Indian heritage. kindly fill the form below.</p>
+                                <p>Don’t miss to subscribe for updates dedicated to Indian heritage. kindly fill the
+                                    form below.</p>
                             </div>
                             <div class="subscribe-form">
                                 <form id="subscribeForm">
@@ -179,7 +203,8 @@
                                     <input type="email" name="email" placeholder="Enter your email" required>
                                     <button type="submit" id="subscribeButton">Subscribe!</button>
                                     <div class="spinner" id="spinner"></div>
-                                    <div id="responseMessage" style="margin-top: 10px; color: rgb(255, 255, 255);"></div>
+                                    <div id="responseMessage" style="margin-top: 10px; color: rgb(255, 255, 255);">
+                                    </div>
                                 </form>
                             </div>
                         </div>
